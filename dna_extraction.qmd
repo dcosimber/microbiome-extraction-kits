@@ -183,8 +183,27 @@ The Friedman test indicated that extraction method significantly influenced DNA 
 ```{r}
 #| echo: false
 
-kable(wilcox_results, caption = "Table 6. Pairwise Wilcoxon test results.") %>%
-  kable_styling(full_width = FALSE)
+DT::datatable(
+  wilcox_results,
+  caption = htmltools::tags$caption(
+    style = "caption-side: top; text-align: left;",
+    "Table 6. Pairwise Wilcoxon test results."
+  ),
+  rownames = FALSE,
+  extensions = "Buttons",
+  class = "display compact nowrap",
+  options = list(
+    pageLength = 10,
+    lengthChange = TRUE,
+    scrollX = TRUE,
+    dom = "<'row'<'col-sm-6'B><'col-sm-6'f>>rtip",
+    buttons = list(
+      list(extend = "copy", text = "Copy"),
+      list(extend = "csv", text = "CSV"),
+      list(extend = "excel", text = "Excel")
+    )
+  )
+)
 ```
 
 Pairwise comparisons revealed specific differences between kits, although statistical power was limited in some cases due to sample size and missing data.
