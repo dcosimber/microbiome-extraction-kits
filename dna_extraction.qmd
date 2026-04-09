@@ -194,7 +194,7 @@ DT::datatable(
   class = "display compact nowrap",
   options = list(
     pageLength = 10,
-    lengthChange = TRUE,
+    lengthChange = FALSE,
     scrollX = TRUE,
     dom = "<'row'<'col-sm-6'B><'col-sm-6'f>>rtip",
     buttons = list(
