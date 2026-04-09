@@ -1,0 +1,81 @@
+Species,Tissue,Individual,Kit,n_rows,nanodrop_mean,ratio_260_280_mean,ratio_260_230_mean,qubit_mean,qubit_status_mode
+Octopus,Skin,1,MasterPure,1,30.6,1.65,0.56,NA,Missing
+Octopus,Skin,1,PowerFecal,1,0.51,1.982,0.19,NA,Out of range
+Octopus,Skin,1,PowerSoil,1,18.8,1.54,0.15,NA,Missing
+Octopus,Skin,1,PureLink,1,5.6,1.7,0.48,NA,Missing
+Octopus,Skin,2,MasterPure,1,31.999,1.693,0.77,NA,Missing
+Octopus,Skin,2,PowerFecal,1,NA,2.938,-0.06,NA,Out of range
+Octopus,Skin,2,PowerSoil,1,0.5,4.81,0,NA,Missing
+Octopus,Skin,2,PureLink,1,6,1.69,0.51,NA,Missing
+Octopus,Skin,3,MasterPure,1,15.713,1.785,0.644,1.74,Measured
+Octopus,Skin,3,PowerFecal,1,10.391,1.54,0.299,NA,Out of range
+Octopus,Skin,3,PowerSoil,1,2.5,1.33,0.02,NA,Out of range
+Octopus,Skin,3,PureLink,1,1.5,0.63,0.15,0.21,Measured
+Octopus,Skin,4,MasterPure,1,15.39,1.847,0.689,NA,Missing
+Octopus,Skin,4,PowerFecal,1,3.094,1.3,0.045,NA,Out of range
+Octopus,Skin,4,PowerSoil,1,27.4,1.54,0.24,NA,Missing
+Octopus,Skin,4,PureLink,1,1,0.57,0.12,0.746,Measured
+Octopus,Skin,5,MasterPure,1,29.214,1.83,0.93,30.2,Measured
+Octopus,Skin,5,PowerFecal,1,3.3,1.23,0.01,0.429,Measured
+Octopus,Skin,5,PowerSoil,1,10.4,1.41,0.4,0.068,Measured
+Octopus,Skin,5,PureLink,1,5.6,0.96,0.21,0.78,Measured
+Octopus,Mantle,1,MasterPure,1,170.1,1.83,1.4,43.9,Measured
+Octopus,Mantle,1,PowerFecal,1,140.4,1.79,0.23,42.7,Measured
+Octopus,Mantle,1,PowerSoil,1,121.4,1.89,0.27,45.4,Measured
+Octopus,Mantle,1,PureLink,1,7.4,1.78,0.58,0.78,Measured
+Octopus,Mantle,2,MasterPure,1,169.98,1.87,1.62,NA,Missing
+Octopus,Mantle,2,PowerFecal,1,199,1.68,0.25,NA,Missing
+Octopus,Mantle,2,PowerSoil,1,20.1,1.89,0.27,NA,Missing
+Octopus,Mantle,2,PureLink,1,7.8,1.66,0.58,NA,Missing
+Octopus,Mantle,3,MasterPure,1,152.6,1.89,1.52,NA,Missing
+Octopus,Mantle,3,PowerFecal,1,28.4,1.71,0.06,NA,Missing
+Octopus,Mantle,3,PowerSoil,1,28.4,1.51,0.2,NA,Missing
+Octopus,Mantle,3,PureLink,1,1.7,0.75,0.35,NA,Missing
+Octopus,Mantle,4,MasterPure,1,71.49,1.81,1.16,29.8,Measured
+Octopus,Mantle,4,PowerFecal,1,168.6,1.54,0.41,4.81,Measured
+Octopus,Mantle,4,PowerSoil,1,27.1,1.58,0.61,3.95,Measured
+Octopus,Mantle,4,PureLink,1,5.6,1.59,0.95,NA,Missing
+Octopus,Mantle,5,MasterPure,1,431.1,1.67,1,10,Measured
+Octopus,Mantle,5,PowerFecal,1,55.7,1.58,0.23,NA,Missing
+Octopus,Mantle,5,PowerSoil,1,21,1.61,0.23,NA,Missing
+Octopus,Mantle,5,PureLink,1,1.6,0.81,0.2,NA,Missing
+Turbot,Skin,1,MasterPure,1,31.9,1.81,0.72,NA,Missing
+Turbot,Skin,1,PowerFecal,1,18.7,1.59,0.1,NA,Missing
+Turbot,Skin,1,PowerSoil,1,6,1.93,0.01,NA,Missing
+Turbot,Skin,1,PureLink,1,0.3,0.77,-0.18,NA,Missing
+Turbot,Skin,2,MasterPure,1,16.72,1.68,0.58,NA,Missing
+Turbot,Skin,2,PowerFecal,1,11.2,1.62,0.3,NA,Missing
+Turbot,Skin,2,PowerSoil,1,1,-1.56,0,NA,Missing
+Turbot,Skin,2,PureLink,1,0.6,0.53,0.1,NA,Missing
+Turbot,Skin,3,MasterPure,1,23.02,1.72,0.844,3.67,Measured
+Turbot,Skin,3,PowerFecal,1,46.6,1.55,0.27,NA,Out of range
+Turbot,Skin,3,PowerSoil,1,1.4,2.83,0.01,NA,Out of range
+Turbot,Skin,3,PureLink,1,6.1,1.73,0.49,0.46,Measured
+Turbot,Skin,4,MasterPure,1,18.89,1.61,0.664,NA,Missing
+Turbot,Skin,4,PowerFecal,1,19.28,1.56,0.52,NA,Missing
+Turbot,Skin,4,PowerSoil,1,2.1,21.21,0,NA,Missing
+Turbot,Skin,4,PureLink,1,6.1,2.03,0.52,NA,Missing
+Turbot,Skin,5,MasterPure,1,20.156,1.54,0.625,4.32,Measured
+Turbot,Skin,5,PowerFecal,1,9.29,1.58,0.2,0.18,Measured
+Turbot,Skin,5,PowerSoil,1,2.3,-5.01,0,0.115,Measured
+Turbot,Skin,5,PureLink,1,6.7,1.5,0.42,0.33,Measured
+Turbot,Gut,1,MasterPure,1,186.1,2.02,1.71,NA,Missing
+Turbot,Gut,1,PowerFecal,1,1.79,1.08,0.18,NA,Missing
+Turbot,Gut,1,PowerSoil,1,36.1,1.53,0.45,NA,Missing
+Turbot,Gut,1,PureLink,1,5.8,1.71,0.48,NA,Missing
+Turbot,Gut,2,MasterPure,1,255.33,1.937,1.619,33.6,Measured
+Turbot,Gut,2,PowerFecal,1,1.76,1.25,0.05,NA,Out of range
+Turbot,Gut,2,PowerSoil,1,6.4,1.61,0.2,NA,Out of range
+Turbot,Gut,2,PureLink,1,9.3,1.54,0.46,0.121,Measured
+Turbot,Gut,3,MasterPure,1,188.636,1.99,1.61,NA,Missing
+Turbot,Gut,3,PowerFecal,1,NA,0.35,0,NA,Missing
+Turbot,Gut,3,PowerSoil,1,54.5,1.56,0.13,NA,Missing
+Turbot,Gut,3,PureLink,1,8.6,1.88,0.6,NA,Missing
+Turbot,Gut,4,MasterPure,1,58.45,1.91,1.36,24.4,Measured
+Turbot,Gut,4,PowerFecal,1,0.97,0.72,0.02,NA,Out of range
+Turbot,Gut,4,PowerSoil,1,15.9,1.53,0.43,0.051,Measured
+Turbot,Gut,4,PureLink,1,8.2,1.85,0.58,0.289,Measured
+Turbot,Gut,5,MasterPure,1,301.281,2.002,1.767,NA,Missing
+Turbot,Gut,5,PowerFecal,1,0.08,-2.08,0.01,NA,Missing
+Turbot,Gut,5,PowerSoil,1,49.2,1.51,0.47,NA,Missing
+Turbot,Gut,5,PureLink,1,7.3,1.76,0.52,NA,Missing

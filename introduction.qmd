@@ -1,0 +1,34 @@
+# Introduction 
+
+Advances in high-throughput sequencing technologies have revolutionized the study of microbial communities, enabling culture-independent characterization of microbiomes across diverse environments. In particular, **16S rRNA gene sequencing and metagenomics** have become widely used to explore microbial diversity, composition, and ecological function [@Weinroth2022]. These approaches have significantly expanded our ability to detect previously uncultivable microorganisms and to investigate complex host–microbiome and environment–microbiome interactions.
+
+Despite these advances, microbiome analyses remain highly sensitive to methodological variation. Multiple steps in the workflow—including sampling, storage, DNA extraction, amplification, and sequencing—can introduce biases that affect downstream results . Among these, **DNA extraction is one of the most critical sources of variability**, as it directly determines DNA yield, quality, and the representation of microbial taxa. Different extraction protocols have been shown to produce significant differences in microbial composition and diversity, even when applied to identical samples [@Kennedy2014].
+
+These discrepancies are largely driven by differences in **cell lysis efficiency**, DNA recovery, and the presence of inhibitory compounds. For example, microorganisms with robust cell walls, such as Gram-positive bacteria, may be underrepresented when lysis is insufficient, whereas co-extracted inhibitors can negatively affect PCR amplification and sequencing efficiency. As a result, extraction methods can influence not only taxonomic profiles but also ecological interpretations derived from microbiome data [@Pu2025].
+
+Importantly, the magnitude of these biases can vary depending on the **type of sample matrix**. While many studies have focused on well-characterized matrices such as soil, sediments, or human-associated samples, less attention has been given to more complex or unconventional substrates. This lack of standardization complicates comparisons across studies and limits reproducibility, particularly when different extraction methods are used.
+
+One such challenging matrix is **marine skin mucus**, which represents a dynamic interface between the host organism and its surrounding environment. This mucus layer plays a key role in host protection, microbial interactions, and environmental sensing, but also presents significant technical challenges for microbiome studies. Its composition—rich in mucopolysaccharides, salts, and host-derived compounds—can interfere with DNA extraction efficiency and downstream enzymatic reactions.
+
+Furthermore, microbiomes associated with marine organisms such as **turbot (*Scophthalmus maximus*) and octopus** remain relatively underexplored, particularly in the context of methodological optimization. Most available DNA extraction protocols have been developed for other sample types and may not be directly suitable for mucus-rich marine samples. As a consequence, there is a need to evaluate how these methods perform in such matrices and whether they provide reliable and representative microbiome profiles.
+
+Taken together, these considerations highlight the importance of **systematically evaluating DNA extraction methods in non-standard, inhibitor-rich biological matrices**, in order to improve reproducibility and ensure accurate microbiome characterization.
+
+## Objective
+
+The main objective of this study is to **compare the performance of different DNA extraction kits for microbiome analysis in marine mucus samples**.
+
+Specifically, this study aims to:
+
+-   Assess differences in **DNA yield, quality, and purity** across extraction methods.
+
+-   Evaluate the impact of extraction protocols on **sequencing performance and data quality**.
+
+-   Compare resulting **microbial diversity and community composition**, identifying potential biases.
+
+-   Identify the extraction method that provides the most **reliable and representative microbiome profiles** for mucus samples from marine organisms such as turbot and octopus.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

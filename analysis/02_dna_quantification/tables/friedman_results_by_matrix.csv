@@ -1,0 +1,17 @@
+metric,Species,Tissue,n_blocks,statistic,p_value
+nanodrop_mean,Octopus,Skin,4,8.1,0.043989589915272645
+nanodrop_mean,Turbot,Skin,5,12.12,0.006983194453265538
+nanodrop_mean,Octopus,Mantle,5,13.040816326530612,0.00454916407745155
+nanodrop_mean,Turbot,Gut,4,11.1,0.011197246715144023
+ratio_260_280_mean,Octopus,Skin,5,5.4,0.14474357941485583
+ratio_260_280_mean,Turbot,Skin,5,1.08,0.7819042243386312
+ratio_260_280_mean,Octopus,Mantle,5,8.76,0.03265800851965352
+ratio_260_280_mean,Turbot,Gut,5,14.04,0.0028512084304522472
+ratio_260_230_mean,Octopus,Skin,5,9.96,0.018909228242395753
+ratio_260_230_mean,Turbot,Skin,5,12.183673469387756,0.0067797401305199284
+ratio_260_230_mean,Octopus,Mantle,5,11.816326530612244,0.00803957776005091
+ratio_260_230_mean,Turbot,Gut,5,15,0.0018166489665723236
+qubit_mean,Octopus,Skin,1,NA,NA
+qubit_mean,Turbot,Skin,1,NA,NA
+qubit_mean,Octopus,Mantle,1,NA,NA
+qubit_mean,Turbot,Gut,0,NA,NA

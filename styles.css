@@ -1,0 +1,150 @@
+/* =====================================================
+   QUARTO CUSTOM STYLES
+   - Justified main body text
+   - Justified figure captions
+   - Table captions above tables and left-aligned
+   - Clean, readable tables
+   - Titles left-aligned
+   ===================================================== */
+
+/* -----------------------------------------------------
+   1. Main body text
+   ----------------------------------------------------- */
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+li {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* -----------------------------------------------------
+   2. Figure captions
+   Keep captions below figures
+   ----------------------------------------------------- */
+
+.figure-caption,
+figcaption {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* -----------------------------------------------------
+   3. Table captions
+   caption-side = top/bottom only
+   text-align controls left/right/center
+   ----------------------------------------------------- */
+
+caption,
+.table-caption,
+table.dataTable > caption {
+  caption-side: top;
+  text-align: left !important;
+  font-weight: bold;
+  line-height: 1.4;
+  padding-bottom: 0.4em;
+}
+
+/* -----------------------------------------------------
+   4. Tables
+   ----------------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+table th,
+table td {
+  vertical-align: top;
+  padding: 6px 8px;
+}
+
+/* Table headers */
+table th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+/* Table body cells */
+table td {
+  text-align: left;
+}
+
+/* -----------------------------------------------------
+   5. DataTables specific tweaks
+   ----------------------------------------------------- */
+
+table.dataTable thead th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+table.dataTable tbody td {
+  text-align: left;
+  vertical-align: top;
+}
+
+div.dt-container div.dt-buttons {
+  margin-bottom: 0.5rem;
+}
+
+div.dt-container div.dt-search {
+  margin-bottom: 0.5rem;
+}
+
+div.dt-container div.dt-search input {
+  margin-left: 0.4rem;
+}
+
+/* Fallback for older DataTables markup */
+div.dataTables_wrapper div.dt-buttons {
+  margin-bottom: 0.5rem;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+  margin-bottom: 0.5rem;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.4rem;
+}
+
+/* -----------------------------------------------------
+   6. Table notes
+   ----------------------------------------------------- */
+
+.table-note {
+  max-width: 100%;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.table-note strong {
+  font-style: italic;
+}
+
+/* -----------------------------------------------------
+   7. Headings
+   ----------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
+
+/* -----------------------------------------------------
+   8. Base alignment
+   ----------------------------------------------------- */
+
+body {
+  text-align: left;
+}

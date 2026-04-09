@@ -1,0 +1,17 @@
+Species,Tissue,Kit,n_individuals
+Octopus,Skin,MasterPure,5
+Octopus,Skin,PowerFecal,5
+Octopus,Skin,PowerSoil,5
+Octopus,Skin,PureLink,5
+Octopus,Mantle,MasterPure,5
+Octopus,Mantle,PowerFecal,5
+Octopus,Mantle,PowerSoil,5
+Octopus,Mantle,PureLink,5
+Turbot,Skin,MasterPure,5
+Turbot,Skin,PowerFecal,5
+Turbot,Skin,PowerSoil,5
+Turbot,Skin,PureLink,5
+Turbot,Gut,MasterPure,5
+Turbot,Gut,PowerFecal,5
+Turbot,Gut,PowerSoil,5
+Turbot,Gut,PureLink,5

@@ -1,0 +1,203 @@
+## DNA extraction and quantification
+
+## Extraction kits
+
+Four commercially available DNA extraction kits were selected to evaluate their performance across different biological matrices, including marine host-associated samples:
+
+-   **MasterPure^TM^ Complete DNA and RNA Purification Kit (# MC85200, Epicentre) and Pathogen Lysis Tubes S (50) (# 19091 Qiagen)**
+
+-   **QIAamp® PowerFecal® Pro DNA Kit (# 51804, Qiagen) = PowerFecal kit**
+
+    The first step of the protocol is mechano-chemical cell disruption through bead beating in lysis buffer. The Inhibitor Removal Technology is then used to remove common substances that interfere with downstream PCR applications. DNA from supernatant is captured on MB Spin Column, washed two times and eluted from the silica membrane.
+
+-   **DNeasy® PowerSoil® Pro Kit (# 47014, Qiagen) = PowerSoil kit**
+
+    The protocol starts with mechano-chemical cell disruption through beat beating in lysis solution. In this kit, Inhibitor Removal Technology is also applied, which should help in removal of organic and inorganic materials such as humic acids, cell debris, and proteins that could interfere with downstream PCR applications. After that, the sample is loaded onto MB Spin Column with silica membrane. DNA is then washed two times and eluted from the silica membrane.
+
+-   **PureLink Genomic DNA Mini Kit (# K182002, Invitrogen) = PureLink kit**
+
+    Multiple protocols are proposed for this kit. In this case we applied the Gram Positive Bacterial Cell Lysate Protocol for all types of samples. In this protocol, the microorganisms are lysed by a combination of heat and enzymatic disruption (lysozyme and proteinase K). After that, the sample is treated with a cleanup buffer to eliminate PCR inhibitors. The sample is then applied to a PureLink™ spin column. DNA is washed one time and then eluted from the silica membrane.
+
+## DNA quantification
+
+DNA concentration and quality were assessed using two complementary approaches:
+
+- **Nanodrop spectrophotometry**, providing estimates of DNA concentration as well as purity ratios (`A260/A280` and `A260/A230`)
+- **Qubit dsDNA High Sensitivity Assay (ThermoFisher)**, providing fluorometric quantification of double-stranded DNA
+
+While Nanodrop measurements were available for all samples, Qubit measurements were only available for a subset of samples. In some cases, Qubit values were reported as *out of range*, indicating DNA concentrations below the detection threshold.
+
+---
+
+# Results
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(readr)
+library(DT)
+library(knitr)
+library(kableExtra)
+library(here)
+
+#| echo: false
+
+dna_clean <- read_csv(here("analysis", "02_dna_quantification", "tables", "dna_quantification_clean.csv"), show_col_types = FALSE)
+
+summary_by_kit <- read_csv(here("analysis", "02_dna_quantification", "tables", "summary_by_kit.csv"), show_col_types = FALSE)
+
+summary_by_kit_species_tissue <- read_csv(here("analysis", "02_dna_quantification", "tables", "summary_by_kit_species_tissue.csv"), show_col_types = FALSE)
+
+purity_pass <- read_csv(here("analysis", "02_dna_quantification", "tables", "purity_pass_by_kit_species_tissue.csv"), show_col_types = FALSE)
+
+friedman_results <- read_csv(here("analysis", "02_dna_quantification", "tables", "friedman_results_by_matrix.csv"), show_col_types = FALSE)
+
+wilcox_results <- read_csv(here("analysis", "02_dna_quantification", "tables", "pairwise_paired_wilcox_by_matrix.csv"), show_col_types = FALSE)
+```
+
+
+## Overview of the dataset
+
+The dataset comprises DNA quantification measurements obtained from two species (Octopus and Turbot), including two tissue types per species. Each biological replicate was processed using all extraction kits, enabling paired comparisons across methods.
+
+```{r}
+#| echo: false
+
+DT::datatable(
+  dna_clean,
+  caption = htmltools::tags$caption(
+    style = "caption-side: top; text-align: left;",
+    "Table 1. DNA quantification dataset."
+  ),
+  rownames = FALSE,
+  extensions = "Buttons",
+  class = "display compact nowrap",
+  options = list(
+    pageLength = 10,
+    scrollX = TRUE,
+    autoWidth = TRUE,
+    dom = "<'row'<'col-sm-6'B><'col-sm-6'f>>rtip",
+    buttons = list(
+      list(extend = "copy", text = "Copy"),
+      list(extend = "csv", text = "CSV"),
+      list(extend = "excel", text = "Excel"),
+      list(extend = "pdf", text = "PDF"),
+      list(extend = "print", text = "Print")
+    )
+  )
+)
+```
+
+::: table-note
+Note:
+Each biological replicate was processed with all extraction kits.
+Swabbing corresponds to technical replicates within each biological sample.
+:::
+
+## DNA concentration
+
+### Descriptive statistics 
+
+```{r}
+#| echo: false
+
+kable(summary_by_kit, caption = "Table 2. DNA concentration and quality summary by extraction kit.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+DNA yield varied substantially across extraction kits. Mechanical lysis-based methods tended to produce higher variability in DNA concentration, whereas enzymatic approaches yielded more consistent but sometimes lower values.
+
+
+```{r}
+#| echo: false
+
+kable(summary_by_kit_species_tissue, caption = "Table 3. DNA concentration summary by kit, species and tissue.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+Differences between kits were strongly dependent on the biological matrix, with mucus-rich samples showing greater variability.
+
+### Visualization 
+
+```{r}
+#| echo: false
+
+knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "nanodrop_by_kit_species_tissue.png"))
+```
+
+
+## DNA purity
+
+### A260/A280 ratio
+
+```{r}
+#| echo: false
+
+knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "nanodrop_by_kit_species_tissue.png"))
+```
+
+Lower A260/A230 ratios were frequently observed, particularly in mucus-rich samples. This suggests the presence of residual contaminants such as salts or organic compounds, highlighting the importance of efficient inhibitor removal.
+
+### Purity thresholds
+
+```{r}
+#| echo: false
+
+kable(purity_pass, caption = "Table 4. Proportion of samples passing purity thresholds.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The proportion of samples meeting standard purity thresholds differed between kits, reflecting variation in purification efficiency.
+
+
+## Qubit measurements
+
+```{r}
+#| echo: false
+
+knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "qubit_status_by_kit_species_tissue.png"))
+```
+
+Qubit measurements were not available for all samples, and a significant proportion of samples fell below the detection threshold. This limits the use of Qubit data as a primary metric for comparison.
+
+```{r}
+#| echo: false
+
+knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "qubit_measured_by_kit_species_tissue.png"))
+```
+
+Among measurable samples, Qubit-based concentrations broadly followed trends observed with Nanodrop, although differences in sensitivity must be considered
+
+
+## Statistical comparisons
+
+To account for the paired experimental design, statistical comparisons were performed at the biological replicate level using non-parametric tests.
+
+```{r}
+#| echo: false
+
+kable(friedman_results, caption = "Table 5. Friedman test results by matrix.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+The Friedman test indicated that extraction method significantly influenced DNA yield and/or quality in several matrices.
+
+```{r}
+#| echo: false
+
+kable(wilcox_results, caption = "Table 6. Pairwise Wilcoxon test results.") %>%
+  kable_styling(full_width = FALSE)
+```
+
+Pairwise comparisons revealed specific differences between kits, although statistical power was limited in some cases due to sample size and missing data.
+
+## Overall, the results demonstrate that:
+
+DNA extraction performance is strongly dependent on both the extraction method and the biological matrix.
+Mechanical lysis-based kits tend to increase variability but may improve DNA recovery in complex samples.
+Enzymatic extraction provides more consistent results but may be less efficient in challenging matrices.
+Inhibitor removal efficiency is a critical factor, particularly for mucus-rich samples such as skin.
+
+Taken together, these findings highlight the importance of selecting an extraction method tailored to the sample type in order to ensure reliable and reproducible microbiome profiling.

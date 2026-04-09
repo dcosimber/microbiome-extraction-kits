@@ -1,0 +1,5 @@
+Kit,n_samples,prop_260_280_17_20,prop_260_280_15_20,prop_260_230_15,prop_260_230_175
+MasterPure,20,0.6,0.9,0.3,0.05
+PowerFecal,20,0.15,0.6,0,0
+PowerSoil,20,0.15,0.65,0,0
+PureLink,20,0.35,0.6,0,0

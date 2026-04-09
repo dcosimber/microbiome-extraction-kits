@@ -1,0 +1,31 @@
+# Experimental design
+
+Samples of two different species were collected: common octopus (*Octopus vulgaris*) and turbot (Scophthalmus maximus). Se muestrearon 5 individuos de cada especie. De cada individuo se
+
+![Experimental workflow comparing four DNA extraction kits (MasterPure, PureLink, PowerSoil, PowerFecal) across microbiome samples from octopus (Octopus vulgaris) and turbot (Scophthalmus maximus). Each individual (n = 5 per species) was sampled for four subsamples per tissue (skin/mantle or skin/gut), one for each extraction kit, totaling 80 samples.](images/experimental_design.png){#exp_design fig-align="center"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(here)
+library(readxl)
+library(knitr)
+library(kableExtra)
+
+df <- read_excel(here("tables", "samples_data.xlsx"), sheet = "samples")
+
+kable(
+  df,
+  caption = "Table 1. Summary of sample"
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    position = "left"
+  )
+```
+
+::: table-note
+<strong>Note:</strong><br> IIM ID: Sample ID assigned in Aquabiotec Lab.<br> PBM ID: Sample ID assigned in Pescanova Marine Center.
+:::

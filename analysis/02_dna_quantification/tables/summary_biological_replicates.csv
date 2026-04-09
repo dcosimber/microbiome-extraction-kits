@@ -1,0 +1,17 @@
+Kit,Species,Tissue,n_individuals,nanodrop_mean,nanodrop_sd,nanodrop_median,ratio_260_280_mean,ratio_260_280_sd,ratio_260_230_mean,ratio_260_230_sd,qubit_mean,qubit_sd
+MasterPure,Octopus,Skin,5,24.583199999999998,NA,24.583199999999998,1.761,NA,0.7186,NA,15.969999999999999,NA
+PowerFecal,Octopus,Skin,5,4.3237499999999995,NA,4.3237499999999995,1.798,NA,0.0968,NA,0.429,NA
+PowerSoil,Octopus,Skin,5,11.92,NA,11.92,2.126,NA,0.162,NA,0.068,NA
+PureLink,Octopus,Skin,5,3.94,NA,3.94,1.1099999999999999,NA,0.294,NA,0.5786666666666667,NA
+MasterPure,Octopus,Mantle,5,199.054,NA,199.054,1.814,NA,1.34,NA,27.9,NA
+PowerFecal,Octopus,Mantle,5,118.42,NA,118.42,1.66,NA,0.236,NA,23.755000000000003,NA
+PowerSoil,Octopus,Mantle,5,43.6,NA,43.6,1.696,NA,0.316,NA,24.675,NA
+PureLink,Octopus,Mantle,5,4.82,NA,4.82,1.318,NA,0.532,NA,0.78,NA
+MasterPure,Turbot,Skin,5,22.1372,NA,22.1372,1.672,NA,0.6866,NA,3.995,NA
+PowerFecal,Turbot,Skin,5,21.014,NA,21.014,1.58,NA,0.278,NA,0.18,NA
+PowerSoil,Turbot,Skin,5,2.56,NA,2.56,3.8800000000000003,NA,0.004,NA,0.115,NA
+PureLink,Turbot,Skin,5,3.96,NA,3.96,1.312,NA,0.27,NA,0.395,NA
+MasterPure,Turbot,Gut,5,197.95940000000002,NA,197.95940000000002,1.9718,NA,1.6132,NA,29,NA
+PowerFecal,Turbot,Gut,5,1.15,NA,1.15,0.264,NA,0.052,NA,NA,NA
+PowerSoil,Turbot,Gut,5,32.42,NA,32.42,1.548,NA,0.336,NA,0.051,NA
+PureLink,Turbot,Gut,5,7.84,NA,7.84,1.748,NA,0.528,NA,0.205,NA

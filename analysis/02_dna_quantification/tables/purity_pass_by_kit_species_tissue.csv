@@ -1,0 +1,17 @@
+Kit,Species,Tissue,n_samples,prop_260_280_17_20,prop_260_280_15_20,prop_260_230_15,prop_260_230_175
+MasterPure,Octopus,Skin,5,0.6,1,0,0
+PowerFecal,Octopus,Skin,5,0.2,0.4,0,0
+PowerSoil,Octopus,Skin,5,0,0.4,0,0
+PureLink,Octopus,Skin,5,0.2,0.4,0,0
+MasterPure,Octopus,Mantle,5,0.8,1,0.4,0
+PowerFecal,Octopus,Mantle,5,0.4,1,0,0
+PowerSoil,Octopus,Mantle,5,0.4,1,0,0
+PureLink,Octopus,Mantle,5,0.2,0.6,0,0
+MasterPure,Turbot,Skin,5,0.4,1,0,0
+PowerFecal,Turbot,Skin,5,0,1,0,0
+PowerSoil,Turbot,Skin,5,0.2,0.2,0,0
+PureLink,Turbot,Skin,5,0.2,0.4,0,0
+MasterPure,Turbot,Gut,5,0.6,0.6,0.8,0.2
+PowerFecal,Turbot,Gut,5,0,0,0,0
+PowerSoil,Turbot,Gut,5,0,1,0,0
+PureLink,Turbot,Gut,5,0.8,1,0,0

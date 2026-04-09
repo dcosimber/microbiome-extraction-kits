@@ -1,0 +1,2917 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Daniel Costas">
+<meta name="dcterms.date" content="2026-04-10">
+
+<title>3&nbsp; DNA extraction and quantification – Microbiome kits comparison</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./summary.html" rel="next">
+<link href="./experimental_design.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4c6d65c679321d81af7ec8b61b1d5a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="site_libs/datatables-binding-0.34.0/datatables.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script src="site_libs/jszip-1.13.6/jszip.min.js"></script>
+
+<script src="site_libs/pdfmake-1.13.6/pdfmake.js"></script>
+
+<script src="site_libs/pdfmake-1.13.6/vfs_fonts.js"></script>
+
+<link href="site_libs/dt-ext-buttons-1.13.6/css/buttons.dataTables.min.css" rel="stylesheet">
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/dataTables.buttons.min.js"></script>
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.html5.min.js"></script>
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.colVis.min.js"></script>
+
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.print.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Microbiome kits comparison</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dna_extraction.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DNA extraction and quantification</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./experimental_design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Experimental design</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dna_extraction.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DNA extraction and quantification</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#extraction-kits" id="toc-extraction-kits" class="nav-link active" data-scroll-target="#extraction-kits"><span class="header-section-number">3.1</span> Extraction kits</a></li>
+  <li><a href="#dna-quantification" id="toc-dna-quantification" class="nav-link" data-scroll-target="#dna-quantification"><span class="header-section-number">3.2</span> DNA quantification</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">4</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#overview-of-the-dataset" id="toc-overview-of-the-dataset" class="nav-link" data-scroll-target="#overview-of-the-dataset"><span class="header-section-number">4.1</span> Overview of the dataset</a></li>
+  <li><a href="#dna-concentration" id="toc-dna-concentration" class="nav-link" data-scroll-target="#dna-concentration"><span class="header-section-number">4.2</span> DNA concentration</a>
+  <ul class="collapse">
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics"><span class="header-section-number">4.2.1</span> Descriptive statistics</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">4.2.2</span> Visualization</a></li>
+  </ul></li>
+  <li><a href="#dna-purity" id="toc-dna-purity" class="nav-link" data-scroll-target="#dna-purity"><span class="header-section-number">4.3</span> DNA purity</a>
+  <ul class="collapse">
+  <li><a href="#a260a280-ratio" id="toc-a260a280-ratio" class="nav-link" data-scroll-target="#a260a280-ratio"><span class="header-section-number">4.3.1</span> A260/A280 ratio</a></li>
+  <li><a href="#purity-thresholds" id="toc-purity-thresholds" class="nav-link" data-scroll-target="#purity-thresholds"><span class="header-section-number">4.3.2</span> Purity thresholds</a></li>
+  </ul></li>
+  <li><a href="#qubit-measurements" id="toc-qubit-measurements" class="nav-link" data-scroll-target="#qubit-measurements"><span class="header-section-number">4.4</span> Qubit measurements</a></li>
+  <li><a href="#statistical-comparisons" id="toc-statistical-comparisons" class="nav-link" data-scroll-target="#statistical-comparisons"><span class="header-section-number">4.5</span> Statistical comparisons</a></li>
+  <li><a href="#overall-the-results-demonstrate-that" id="toc-overall-the-results-demonstrate-that" class="nav-link" data-scroll-target="#overall-the-results-demonstrate-that"><span class="header-section-number">4.6</span> Overall, the results demonstrate that:</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">DNA extraction and quantification</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Daniel Costas </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="extraction-kits" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="extraction-kits"><span class="header-section-number">3.1</span> Extraction kits</h2>
+<p>Four commercially available DNA extraction kits were selected to evaluate their performance across different biological matrices, including marine host-associated samples:</p>
+<ul>
+<li><p><strong>MasterPure<sup>TM</sup> Complete DNA and RNA Purification Kit (# MC85200, Epicentre) and Pathogen Lysis Tubes S (50) (# 19091 Qiagen)</strong></p></li>
+<li><p><strong>QIAamp® PowerFecal® Pro DNA Kit (# 51804, Qiagen) = PowerFecal kit</strong></p>
+<p>The first step of the protocol is mechano-chemical cell disruption through bead beating in lysis buffer. The Inhibitor Removal Technology is then used to remove common substances that interfere with downstream PCR applications. DNA from supernatant is captured on MB Spin Column, washed two times and eluted from the silica membrane.</p></li>
+<li><p><strong>DNeasy® PowerSoil® Pro Kit (# 47014, Qiagen) = PowerSoil kit</strong></p>
+<p>The protocol starts with mechano-chemical cell disruption through beat beating in lysis solution. In this kit, Inhibitor Removal Technology is also applied, which should help in removal of organic and inorganic materials such as humic acids, cell debris, and proteins that could interfere with downstream PCR applications. After that, the sample is loaded onto MB Spin Column with silica membrane. DNA is then washed two times and eluted from the silica membrane.</p></li>
+<li><p><strong>PureLink Genomic DNA Mini Kit (# K182002, Invitrogen) = PureLink kit</strong></p>
+<p>Multiple protocols are proposed for this kit. In this case we applied the Gram Positive Bacterial Cell Lysate Protocol for all types of samples. In this protocol, the microorganisms are lysed by a combination of heat and enzymatic disruption (lysozyme and proteinase K). After that, the sample is treated with a cleanup buffer to eliminate PCR inhibitors. The sample is then applied to a PureLink™ spin column. DNA is washed one time and then eluted from the silica membrane.</p></li>
+</ul>
+</section>
+<section id="dna-quantification" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="dna-quantification"><span class="header-section-number">3.2</span> DNA quantification</h2>
+<p>DNA concentration and quality were assessed using two complementary approaches:</p>
+<ul>
+<li><strong>Nanodrop spectrophotometry</strong>, providing estimates of DNA concentration as well as purity ratios (<code>A260/A280</code> and <code>A260/A230</code>)</li>
+<li><strong>Qubit dsDNA High Sensitivity Assay (ThermoFisher)</strong>, providing fluorometric quantification of double-stranded DNA</li>
+</ul>
+<p>While Nanodrop measurements were available for all samples, Qubit measurements were only available for a subset of samples. In some cases, Qubit values were reported as <em>out of range</em>, indicating DNA concentrations below the detection threshold.</p>
+<hr>
+</section>
+<section id="results" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Results</h1>
+<section id="overview-of-the-dataset" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="overview-of-the-dataset"><span class="header-section-number">4.1</span> Overview of the dataset</h2>
+<p>The dataset comprises DNA quantification measurements obtained from two species (Octopus and Turbot), including two tissue types per species. Each biological replicate was processed using all extraction kits, enabling paired comparisons across methods.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-34643e3b31e72f9d156b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-34643e3b31e72f9d156b">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"caption":"<caption>Table 1. DNA quantification dataset.<\/caption>","data":[["P1M1","P1M3","P1M4","P1M2","P2M1","P2M3","P2M4","P2M2","P3M1","P3M3","P3M4","P3M2","P4M1","P4M3","P4M4","P4M2","P5M1","P5M3","P5M4","P5M2","P1I1","P1I3","P1I4","P1I2","P2I1","P2I3","P2I4","P2I2","P3I1","P3I3","P3I4","P3I2","P4I1","P4I3","P4I4","P4I2","P5I1","P5I3","P5I4","P5I2","R1M1","R1M3","R1M4","R1M2","R2M1","R2M3","R2M4","R2M2","R3M1","R3M3","R3M4","R3M2","R4M1","R4M3","R4M4","R4M2","R5M1","R5M3","R5M4","R5M2","R1I1","R1I3","R1I4","R1I2","R2I1","R2I3","R2I4","R2I2","R3I1","R3I3","R3I4","R3I2","R4I1","R4I3","R4I4","R4I2","R5I1","R5I3","R5I4","R5I2"],["O1","O3","O4","O2","O5","O7","O8","O6","O9","O11","O12","O10","O13","O15","O16","O14","O17","O19","O20","O18","O21","O23","O24","O22","O25","O27","O28","O26","O29","O31","O32","O30","O33","O35","O36","O34","O37","O39","O40","O38","T1","T3","T4","T2","T5","T7","T8","T6","T9","T11","T12","T10","T13","T15","T16","T14","T17","T19","T20","T18","T21","T23","T24","T22","T25","T27","T28","T26","T29","T31","T32","T30","T33","T35","T36","T34","T37","T39","T40","T38"],["Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Octopus","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot","Turbot"],[1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5],[1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2,1,3,4,2],["Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Mantle","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Skin","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut","Gut"],["2025-11-10","2025-11-18","2025-11-26","2025-11-28","2025-11-12","2025-11-18","2025-11-26","2025-11-28","2025-11-12","2025-11-18","2025-11-26","2025-12-01","2025-11-12","2025-11-18","2025-11-26","2025-12-01","2025-11-12","2025-11-19","2025-11-26","2025-12-01","2025-11-10","2025-11-19","2025-11-25","2025-11-28","2025-11-12","2025-11-19","2025-11-25","2025-11-28","2025-11-12","2025-11-19","2026-11-26","2025-12-01","2025-11-12","2025-11-20","2025-11-26","2025-12-01","2025-11-12","2025-11-20","2025-11-26","2025-12-01","2025-11-10","2025-11-20","2025-11-24","2025-12-01","2025-11-13","2025-11-20","2025-11-25","2025-12-01","2025-11-13","2025-11-21","2025-11-25","2025-12-02","2025-11-13","2025-11-21","2025-11-25","2025-12-02","2025-11-13","2025-11-21","2025-11-25","2025-12-02","2025-11-10","2025-11-21","2025-11-24","2025-12-02","2025-11-13","2025-11-21","2025-11-24","2025-12-02","2025-11-13","2025-11-21","2025-11-24","2025-12-02","2025-11-13","2025-11-21","2025-11-24","2025-12-02","2025-11-13","2025-11-21","2025-11-24","2025-12-02"],["MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink","MasterPure","PowerFecal","PowerSoil","PureLink"],[30.6,0.51,18.8,5.6,31.999,-3.538,0.5,6,15.713,10.391,2.5,1.5,15.39,3.094,27.4,1,29.214,3.3,10.4,5.6,170.1,140.4,121.4,7.4,169.98,199,20.1,7.8,152.6,28.4,28.4,1.7,71.48999999999999,168.6,27.1,5.6,431.1,55.7,21,1.6,31.9,18.7,6,0.3,16.72,11.2,1,0.6,23.02,46.6,1.4,6.1,18.89,19.28,2.1,6.1,20.156,9.289999999999999,2.3,6.7,186.1,1.79,36.1,5.8,255.33,1.76,6.4,9.300000000000001,188.636,-0.5,54.5,8.6,58.45,0.97,15.9,8.199999999999999,301.281,0.08,49.2,7.3],[1.65,1.982,1.54,1.7,1.693,2.938,4.81,1.69,1.785,1.54,1.33,0.63,1.847,1.3,1.54,0.57,1.83,1.23,1.41,0.96,1.83,1.79,1.89,1.78,1.87,1.68,1.89,1.66,1.89,1.71,1.51,0.75,1.81,1.54,1.58,1.59,1.67,1.58,1.61,0.8100000000000001,1.81,1.59,1.93,0.77,1.68,1.62,-1.56,0.53,1.72,1.55,2.83,1.73,1.61,1.56,21.21,2.03,1.54,1.58,-5.01,1.5,2.02,1.08,1.53,1.71,1.937,1.25,1.61,1.54,1.99,0.35,1.56,1.88,1.91,0.72,1.53,1.85,2.002,-2.08,1.51,1.76],[0.5600000000000001,0.19,0.15,0.48,0.77,-0.06,0,0.51,0.644,0.299,0.02,0.15,0.6889999999999999,0.045,0.24,0.12,0.93,0.01,0.4,0.21,1.4,0.23,0.27,0.58,1.62,0.25,0.27,0.58,1.52,0.06,0.2,0.35,1.16,0.41,0.61,0.95,1,0.23,0.23,0.2,0.72,0.1,0.01,-0.18,0.58,0.3,0,0.1,0.844,0.27,0.01,0.49,0.664,0.52,0,0.52,0.625,0.2,0,0.42,1.71,0.18,0.45,0.48,1.619,0.05,0.2,0.46,1.61,0,0.13,0.6,1.36,0.02,0.43,0.58,1.767,0.01,0.47,0.52],[null,"Out of range",null,null,null,"Out of range",null,null,"1.74","Out of range","Out of range","0.21",null,"Out of range",null,"0.746","30.2","0.42899999999999999","6.8000000000000005E-2","0.78","43.9","42.7","45.4","0.78",null,null,null,null,null,null,null,null,"29.8","4.8099999999999996","3.95",null,"10",null,null,null,null,null,null,null,null,null,null,null,"3.67","Out of range","Out of range","0.46",null,null,null,null,"4.32","0.18","0.115","0.33",null,null,null,null,"33.6","Out of range","Out of range","0.121",null,null,null,null,"24.4","Out of range","5.0999999999999997E-2","0.28899999999999998",null,null,null,null],["Y","N","Y","N","Y","N","N","N","Y","Y","N","N","Y","N","Y","N","Y","N","Y","N","Y","Y","Y","N","Y","Y","Y","N","Y","Y","Y","N","Y","Y","Y","N","Y","Y","Y","N","Y","Y","Y","N","Y","Y","N","N","Y","Y","N","N","Y","Y","N","N","Y","N","N","N","Y","N","Y","N","Y","N","Y","N","Y","N","Y","N","Y","N","Y","N","Y","N","Y","N"],[null,"Out of range",null,null,null,"Out of range",null,null,"1.74","Out of range","Out of range","0.21",null,"Out of range",null,"0.746","30.2","0.42899999999999999","6.8000000000000005E-2","0.78","43.9","42.7","45.4","0.78",null,null,null,null,null,null,null,null,"29.8","4.8099999999999996","3.95",null,"10",null,null,null,null,null,null,null,null,null,null,null,"3.67","Out of range","Out of range","0.46",null,null,null,null,"4.32","0.18","0.115","0.33",null,null,null,null,"33.6","Out of range","Out of range","0.121",null,null,null,null,"24.4","Out of range","5.0999999999999997E-2","0.28899999999999998",null,null,null,null],["Missing","Out of range","Missing","Missing","Missing","Out of range","Missing","Missing","Measured","Out of range","Out of range","Measured","Missing","Out of range","Missing","Measured","Measured","Measured","Measured","Measured","Measured","Measured","Measured","Measured","Missing","Missing","Missing","Missing","Missing","Missing","Missing","Missing","Measured","Measured","Measured","Missing","Measured","Missing","Missing","Missing","Missing","Missing","Missing","Missing","Missing","Missing","Missing","Missing","Measured","Out of range","Out of range","Measured","Missing","Missing","Missing","Missing","Measured","Measured","Measured","Measured","Missing","Missing","Missing","Missing","Measured","Out of range","Out of range","Measured","Missing","Missing","Missing","Missing","Measured","Out of range","Measured","Measured","Missing","Missing","Missing","Missing"],[null,null,null,null,null,null,null,null,1.74,null,null,0.21,null,null,null,0.746,30.2,0.429,0.068,0.78,43.9,42.7,45.4,0.78,null,null,null,null,null,null,null,null,29.8,4.81,3.95,null,10,null,null,null,null,null,null,null,null,null,null,null,3.67,null,null,0.46,null,null,null,null,4.32,0.18,0.115,0.33,null,null,null,null,33.6,null,null,0.121,null,null,null,null,24.4,null,0.051,0.289,null,null,null,null],[null,0,null,null,null,0,null,null,1.74,0,0,0.21,null,0,null,0.746,30.2,0.429,0.068,0.78,43.9,42.7,45.4,0.78,null,null,null,null,null,null,null,null,29.8,4.81,3.95,null,10,null,null,null,null,null,null,null,null,null,null,null,3.67,0,0,0.46,null,null,null,null,4.32,0.18,0.115,0.33,null,null,null,null,33.6,0,0,0.121,null,null,null,null,24.4,0,0.051,0.289,null,null,null,null],[false,true,false,true,false,false,false,false,true,false,false,false,true,false,false,false,true,false,false,false,true,true,true,true,true,false,true,false,true,true,false,false,true,false,false,false,false,false,false,false,true,false,true,false,false,false,false,false,true,false,false,true,false,false,false,false,false,false,false,false,false,false,false,true,true,false,false,false,true,false,false,true,true,false,false,true,false,false,false,true],[true,true,true,true,true,false,false,true,true,true,false,false,true,false,true,false,true,false,false,false,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,false,true,true,true,false,true,true,false,false,true,true,false,true,true,true,false,false,true,true,false,true,false,false,true,true,true,false,true,true,true,false,true,true,true,false,true,true,false,false,true,true],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,true,false,false,false,true,false,false,false,false,false,false,false,true,false,false,false],[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false],[true,false,true,false,true,false,false,false,true,true,false,false,true,false,true,false,true,false,true,false,true,true,true,false,true,true,true,false,true,true,true,false,true,true,true,false,true,true,true,false,true,true,true,false,true,true,false,false,true,true,false,false,true,true,false,false,true,false,false,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false]],"container":"<table class=\"display compact nowrap\">\n  <thead>\n    <tr>\n      <th>IIM ID<\/th>\n      <th>Novogene ID<\/th>\n      <th>Species<\/th>\n      <th>Individual<\/th>\n      <th>Swabbing<\/th>\n      <th>Tissue<\/th>\n      <th>Extraction date<\/th>\n      <th>Kit<\/th>\n      <th>[ng/µL] Nanodrop<\/th>\n      <th>Ratio 260/280<\/th>\n      <th>Ratio 260/230<\/th>\n      <th>[ng/µL] Qubit<\/th>\n      <th>Sequencing<\/th>\n      <th>Qubit_raw<\/th>\n      <th>Qubit_status<\/th>\n      <th>Qubit_ng_uL<\/th>\n      <th>Qubit_ng_uL_zero<\/th>\n      <th>pass_260_280_17_20<\/th>\n      <th>pass_260_280_15_20<\/th>\n      <th>pass_260_230_15<\/th>\n      <th>pass_260_230_175<\/th>\n      <th>sequencing_selected<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"scrollX":true,"autoWidth":true,"dom":"<'row'<'col-sm-6'B><'col-sm-6'f>>rtip","buttons":[{"extend":"copy","text":"Copy"},{"extend":"csv","text":"CSV"},{"extend":"excel","text":"Excel"},{"extend":"pdf","text":"PDF"},{"extend":"print","text":"Print"}],"columnDefs":[{"className":"dt-right","targets":[3,4,8,9,10,15,16]},{"name":"IIM ID","targets":0},{"name":"Novogene ID","targets":1},{"name":"Species","targets":2},{"name":"Individual","targets":3},{"name":"Swabbing","targets":4},{"name":"Tissue","targets":5},{"name":"Extraction date","targets":6},{"name":"Kit","targets":7},{"name":"[ng/µL] Nanodrop","targets":8},{"name":"Ratio 260/280","targets":9},{"name":"Ratio 260/230","targets":10},{"name":"[ng/µL] Qubit","targets":11},{"name":"Sequencing","targets":12},{"name":"Qubit_raw","targets":13},{"name":"Qubit_status","targets":14},{"name":"Qubit_ng_uL","targets":15},{"name":"Qubit_ng_uL_zero","targets":16},{"name":"pass_260_280_17_20","targets":17},{"name":"pass_260_280_15_20","targets":18},{"name":"pass_260_230_15","targets":19},{"name":"pass_260_230_175","targets":20},{"name":"sequencing_selected","targets":21}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="table-note">
+<p>Note: Each biological replicate was processed with all extraction kits. Swabbing corresponds to technical replicates within each biological sample.</p>
+</div>
+</section>
+<section id="dna-concentration" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="dna-concentration"><span class="header-section-number">4.2</span> DNA concentration</h2>
+<section id="descriptive-statistics" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="descriptive-statistics"><span class="header-section-number">4.2.1</span> Descriptive statistics</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Table 2. DNA concentration and quality summary by extraction kit.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Kit</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n_samples</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_median</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_min</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_max</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_280_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_280_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_280_median</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_230_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_230_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_230_median</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_n_measured</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_n_out_of_range</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_n_missing</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_median</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_min</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">110.93345</td>
+<td style="text-align: right;">117.30121</td>
+<td style="text-align: right;">45.2245</td>
+<td style="text-align: right;">15.39</td>
+<td style="text-align: right;">431.1</td>
+<td style="text-align: right;">1.8047</td>
+<td style="text-align: right;">0.1354358</td>
+<td style="text-align: right;">1.820</td>
+<td style="text-align: right;">1.0896</td>
+<td style="text-align: right;">0.4391739</td>
+<td style="text-align: right;">0.965</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">20.18111</td>
+<td style="text-align: right;">15.4970710</td>
+<td style="text-align: right;">24.4000</td>
+<td style="text-align: right;">1.740</td>
+<td style="text-align: right;">43.90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">39.94806</td>
+<td style="text-align: right;">62.38570</td>
+<td style="text-align: right;">10.7955</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">199.0</td>
+<td style="text-align: right;">1.3255</td>
+<td style="text-align: right;">0.9457791</td>
+<td style="text-align: right;">1.555</td>
+<td style="text-align: right;">0.1657</td>
+<td style="text-align: right;">0.1523148</td>
+<td style="text-align: right;">0.185</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12.02975</td>
+<td style="text-align: right;">20.5570993</td>
+<td style="text-align: right;">2.6195</td>
+<td style="text-align: right;">0.180</td>
+<td style="text-align: right;">42.70</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">22.62500</td>
+<td style="text-align: right;">28.22981</td>
+<td style="text-align: right;">17.3500</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">121.4</td>
+<td style="text-align: right;">2.3125</td>
+<td style="text-align: right;">4.8139883</td>
+<td style="text-align: right;">1.550</td>
+<td style="text-align: right;">0.2045</td>
+<td style="text-align: right;">0.1892221</td>
+<td style="text-align: right;">0.200</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">9.91680</td>
+<td style="text-align: right;">19.9064584</td>
+<td style="text-align: right;">0.1150</td>
+<td style="text-align: right;">0.051</td>
+<td style="text-align: right;">45.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">5.14000</td>
+<td style="text-align: right;">2.90524</td>
+<td style="text-align: right;">5.9000</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">9.3</td>
+<td style="text-align: right;">1.3720</td>
+<td style="text-align: right;">0.5130056</td>
+<td style="text-align: right;">1.625</td>
+<td style="text-align: right;">0.4060</td>
+<td style="text-align: right;">0.2460937</td>
+<td style="text-align: right;">0.480</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">0.46450</td>
+<td style="text-align: right;">0.2699196</td>
+<td style="text-align: right;">0.3950</td>
+<td style="text-align: right;">0.121</td>
+<td style="text-align: right;">0.78</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>DNA yield varied substantially across extraction kits. Mechanical lysis-based methods tended to produce higher variability in DNA concentration, whereas enzymatic approaches yielded more consistent but sometimes lower values.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Table 3. DNA concentration summary by kit, species and tissue.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Kit</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Species</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tissue</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n_samples</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_median</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_min</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nanodrop_max</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_280_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_280_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_280_median</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_230_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_230_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio_260_230_median</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_n_measured</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_n_out_of_range</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_n_missing</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_sd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">qubit_median</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">24.58320</td>
+<td style="text-align: right;">8.3041504</td>
+<td style="text-align: right;">29.214</td>
+<td style="text-align: right;">15.39</td>
+<td style="text-align: right;">31.999</td>
+<td style="text-align: right;">1.7610</td>
+<td style="text-align: right;">0.0861365</td>
+<td style="text-align: right;">1.785</td>
+<td style="text-align: right;">0.7186</td>
+<td style="text-align: right;">0.1404699</td>
+<td style="text-align: right;">0.689</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">15.9700000</td>
+<td style="text-align: right;">20.1242590</td>
+<td style="text-align: right;">15.970</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4.32375</td>
+<td style="text-align: right;">4.2393616</td>
+<td style="text-align: right;">3.197</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">10.391</td>
+<td style="text-align: right;">1.7980</td>
+<td style="text-align: right;">0.7018989</td>
+<td style="text-align: right;">1.540</td>
+<td style="text-align: right;">0.0968</td>
+<td style="text-align: right;">0.1452367</td>
+<td style="text-align: right;">0.045</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.4290000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.429</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.92000</td>
+<td style="text-align: right;">11.2741740</td>
+<td style="text-align: right;">10.400</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">27.400</td>
+<td style="text-align: right;">2.1260</td>
+<td style="text-align: right;">1.5030735</td>
+<td style="text-align: right;">1.540</td>
+<td style="text-align: right;">0.1620</td>
+<td style="text-align: right;">0.1652876</td>
+<td style="text-align: right;">0.150</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.0680000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.068</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3.94000</td>
+<td style="text-align: right;">2.4673873</td>
+<td style="text-align: right;">5.600</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">6.000</td>
+<td style="text-align: right;">1.1100</td>
+<td style="text-align: right;">0.5543014</td>
+<td style="text-align: right;">0.960</td>
+<td style="text-align: right;">0.2940</td>
+<td style="text-align: right;">0.1866280</td>
+<td style="text-align: right;">0.210</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.5786667</td>
+<td style="text-align: right;">0.3197270</td>
+<td style="text-align: right;">0.746</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">199.05400</td>
+<td style="text-align: right;">135.9775036</td>
+<td style="text-align: right;">169.980</td>
+<td style="text-align: right;">71.49</td>
+<td style="text-align: right;">431.100</td>
+<td style="text-align: right;">1.8140</td>
+<td style="text-align: right;">0.0864870</td>
+<td style="text-align: right;">1.830</td>
+<td style="text-align: right;">1.3400</td>
+<td style="text-align: right;">0.2561250</td>
+<td style="text-align: right;">1.400</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">27.9000000</td>
+<td style="text-align: right;">17.0296800</td>
+<td style="text-align: right;">29.800</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">118.42000</td>
+<td style="text-align: right;">73.3683992</td>
+<td style="text-align: right;">140.400</td>
+<td style="text-align: right;">28.40</td>
+<td style="text-align: right;">199.000</td>
+<td style="text-align: right;">1.6600</td>
+<td style="text-align: right;">0.1007472</td>
+<td style="text-align: right;">1.680</td>
+<td style="text-align: right;">0.2360</td>
+<td style="text-align: right;">0.1240161</td>
+<td style="text-align: right;">0.230</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">23.7550000</td>
+<td style="text-align: right;">26.7922759</td>
+<td style="text-align: right;">23.755</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">43.60000</td>
+<td style="text-align: right;">43.6438426</td>
+<td style="text-align: right;">27.100</td>
+<td style="text-align: right;">20.10</td>
+<td style="text-align: right;">121.400</td>
+<td style="text-align: right;">1.6960</td>
+<td style="text-align: right;">0.1807761</td>
+<td style="text-align: right;">1.610</td>
+<td style="text-align: right;">0.3160</td>
+<td style="text-align: right;">0.1669731</td>
+<td style="text-align: right;">0.270</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">24.6750000</td>
+<td style="text-align: right;">29.3095761</td>
+<td style="text-align: right;">24.675</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4.82000</td>
+<td style="text-align: right;">3.0103156</td>
+<td style="text-align: right;">5.600</td>
+<td style="text-align: right;">1.60</td>
+<td style="text-align: right;">7.800</td>
+<td style="text-align: right;">1.3180</td>
+<td style="text-align: right;">0.4962560</td>
+<td style="text-align: right;">1.590</td>
+<td style="text-align: right;">0.5320</td>
+<td style="text-align: right;">0.2840246</td>
+<td style="text-align: right;">0.580</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.7800000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.780</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">22.13720</td>
+<td style="text-align: right;">5.9141169</td>
+<td style="text-align: right;">20.156</td>
+<td style="text-align: right;">16.72</td>
+<td style="text-align: right;">31.900</td>
+<td style="text-align: right;">1.6720</td>
+<td style="text-align: right;">0.1032957</td>
+<td style="text-align: right;">1.680</td>
+<td style="text-align: right;">0.6866</td>
+<td style="text-align: right;">0.1019304</td>
+<td style="text-align: right;">0.664</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3.9950000</td>
+<td style="text-align: right;">0.4596194</td>
+<td style="text-align: right;">3.995</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">21.01400</td>
+<td style="text-align: right;">14.9730718</td>
+<td style="text-align: right;">18.700</td>
+<td style="text-align: right;">9.29</td>
+<td style="text-align: right;">46.600</td>
+<td style="text-align: right;">1.5800</td>
+<td style="text-align: right;">0.0273861</td>
+<td style="text-align: right;">1.580</td>
+<td style="text-align: right;">0.2780</td>
+<td style="text-align: right;">0.1556278</td>
+<td style="text-align: right;">0.270</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.1800000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.180</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2.56000</td>
+<td style="text-align: right;">1.9932386</td>
+<td style="text-align: right;">2.100</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">6.000</td>
+<td style="text-align: right;">3.8800</td>
+<td style="text-align: right;">10.1717698</td>
+<td style="text-align: right;">1.930</td>
+<td style="text-align: right;">0.0040</td>
+<td style="text-align: right;">0.0054772</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.1150000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.115</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3.96000</td>
+<td style="text-align: right;">3.2152760</td>
+<td style="text-align: right;">6.100</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">6.700</td>
+<td style="text-align: right;">1.3120</td>
+<td style="text-align: right;">0.6385296</td>
+<td style="text-align: right;">1.500</td>
+<td style="text-align: right;">0.2700</td>
+<td style="text-align: right;">0.3019934</td>
+<td style="text-align: right;">0.420</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.3950000</td>
+<td style="text-align: right;">0.0919239</td>
+<td style="text-align: right;">0.395</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">197.95940</td>
+<td style="text-align: right;">91.7294699</td>
+<td style="text-align: right;">188.636</td>
+<td style="text-align: right;">58.45</td>
+<td style="text-align: right;">301.281</td>
+<td style="text-align: right;">1.9718</td>
+<td style="text-align: right;">0.0463595</td>
+<td style="text-align: right;">1.990</td>
+<td style="text-align: right;">1.6132</td>
+<td style="text-align: right;">0.1558676</td>
+<td style="text-align: right;">1.619</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">29.0000000</td>
+<td style="text-align: right;">6.5053824</td>
+<td style="text-align: right;">29.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.15000</td>
+<td style="text-align: right;">0.8080842</td>
+<td style="text-align: right;">1.365</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">1.790</td>
+<td style="text-align: right;">0.2640</td>
+<td style="text-align: right;">1.3553339</td>
+<td style="text-align: right;">0.720</td>
+<td style="text-align: right;">0.0520</td>
+<td style="text-align: right;">0.0739594</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">32.42000</td>
+<td style="text-align: right;">20.8121839</td>
+<td style="text-align: right;">36.100</td>
+<td style="text-align: right;">6.40</td>
+<td style="text-align: right;">54.500</td>
+<td style="text-align: right;">1.5480</td>
+<td style="text-align: right;">0.0389872</td>
+<td style="text-align: right;">1.530</td>
+<td style="text-align: right;">0.3360</td>
+<td style="text-align: right;">0.1586821</td>
+<td style="text-align: right;">0.430</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.0510000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.051</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7.84000</td>
+<td style="text-align: right;">1.3501852</td>
+<td style="text-align: right;">8.200</td>
+<td style="text-align: right;">5.80</td>
+<td style="text-align: right;">9.300</td>
+<td style="text-align: right;">1.7480</td>
+<td style="text-align: right;">0.1347961</td>
+<td style="text-align: right;">1.760</td>
+<td style="text-align: right;">0.5280</td>
+<td style="text-align: right;">0.0609918</td>
+<td style="text-align: right;">0.520</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.2050000</td>
+<td style="text-align: right;">0.1187939</td>
+<td style="text-align: right;">0.205</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Differences between kits were strongly dependent on the biological matrix, with mucus-rich samples showing greater variability.</p>
+</section>
+<section id="visualization" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="visualization"><span class="header-section-number">4.2.2</span> Visualization</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis/02_dna_quantification/plots/nanodrop_by_kit_species_tissue.png" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="dna-purity" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="dna-purity"><span class="header-section-number">4.3</span> DNA purity</h2>
+<section id="a260a280-ratio" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="a260a280-ratio"><span class="header-section-number">4.3.1</span> A260/A280 ratio</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis/02_dna_quantification/plots/nanodrop_by_kit_species_tissue.png" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Lower A260/A230 ratios were frequently observed, particularly in mucus-rich samples. This suggests the presence of residual contaminants such as salts or organic compounds, highlighting the importance of efficient inhibitor removal.</p>
+</section>
+<section id="purity-thresholds" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="purity-thresholds"><span class="header-section-number">4.3.2</span> Purity thresholds</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Table 4. Proportion of samples passing purity thresholds.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Kit</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Species</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tissue</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n_samples</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">prop_260_280_17_20</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">prop_260_280_15_20</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">prop_260_230_15</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">prop_260_230_175</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The proportion of samples meeting standard purity thresholds differed between kits, reflecting variation in purification efficiency.</p>
+</section>
+</section>
+<section id="qubit-measurements" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="qubit-measurements"><span class="header-section-number">4.4</span> Qubit measurements</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis/02_dna_quantification/plots/qubit_status_by_kit_species_tissue.png" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Qubit measurements were not available for all samples, and a significant proportion of samples fell below the detection threshold. This limits the use of Qubit data as a primary metric for comparison.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis/02_dna_quantification/plots/qubit_measured_by_kit_species_tissue.png" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Among measurable samples, Qubit-based concentrations broadly followed trends observed with Nanodrop, although differences in sensitivity must be considered</p>
+</section>
+<section id="statistical-comparisons" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="statistical-comparisons"><span class="header-section-number">4.5</span> Statistical comparisons</h2>
+<p>To account for the paired experimental design, statistical comparisons were performed at the biological replicate level using non-parametric tests.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Table 5. Friedman test results by matrix.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">metric</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Species</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tissue</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n_blocks</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p_value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8.10000</td>
+<td style="text-align: right;">0.0439896</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">12.12000</td>
+<td style="text-align: right;">0.0069832</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">13.04082</td>
+<td style="text-align: right;">0.0045492</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">11.10000</td>
+<td style="text-align: right;">0.0111972</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5.40000</td>
+<td style="text-align: right;">0.1447436</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.08000</td>
+<td style="text-align: right;">0.7819042</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8.76000</td>
+<td style="text-align: right;">0.0326580</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">14.04000</td>
+<td style="text-align: right;">0.0028512</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9.96000</td>
+<td style="text-align: right;">0.0189092</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">12.18367</td>
+<td style="text-align: right;">0.0067797</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.81633</td>
+<td style="text-align: right;">0.0080396</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.00000</td>
+<td style="text-align: right;">0.0018166</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The Friedman test indicated that extraction method significantly influenced DNA yield and/or quality in several matrices.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Table 6. Pairwise Wilcoxon test results.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">metric</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Species</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tissue</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">group1</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">group2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n_pairs</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p_value</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p_adj_bh</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">0.1003482</td>
+<td style="text-align: right;">0.3010447</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">13.0</td>
+<td style="text-align: right;">0.1775299</td>
+<td style="text-align: right;">0.3550597</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.3010447</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">0.3613104</td>
+<td style="text-align: right;">0.4335725</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: right;">0.2807127</td>
+<td style="text-align: right;">0.4210690</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">0.4184922</td>
+<td style="text-align: right;">0.4184922</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">0.1003482</td>
+<td style="text-align: right;">0.1204179</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">0.7874065</td>
+<td style="text-align: right;">0.7874065</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">0.7874065</td>
+<td style="text-align: right;">0.7874065</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">0.1003482</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.1003482</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.1003482</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nanodrop_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">0.1056454</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">0.5896386</td>
+<td style="text-align: right;">0.8844578</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">13.0</td>
+<td style="text-align: right;">0.1775299</td>
+<td style="text-align: right;">0.3550597</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">0.7874065</td>
+<td style="text-align: right;">0.9448878</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.3169363</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">0.1056454</td>
+<td style="text-align: right;">0.3169363</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1771747</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.5</td>
+<td style="text-align: right;">0.3430278</td>
+<td style="text-align: right;">0.4116334</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1771747</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">0.4184922</td>
+<td style="text-align: right;">0.4184922</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: right;">0.2807127</td>
+<td style="text-align: right;">0.4116334</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">0.1056454</td>
+<td style="text-align: right;">0.2112909</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">0.1056454</td>
+<td style="text-align: right;">0.6338726</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">0.4184922</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">0.5896386</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0708699</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0708699</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0708699</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0708699</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0708699</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_280_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.1056454</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1181165</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1181165</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1181165</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">0.5896386</td>
+<td style="text-align: right;">0.5896386</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">0.1775299</td>
+<td style="text-align: right;">0.2662948</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">0.4184922</td>
+<td style="text-align: right;">0.5021907</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.1003482</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.1056454</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">0.1040592</td>
+<td style="text-align: right;">0.1056454</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0885873</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">0.1775299</td>
+<td style="text-align: right;">0.2130358</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0590582</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0590582</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0590582</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0590582</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0590582</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ratio_260_230_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0590582</td>
+<td style="text-align: right;">0.0590582</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3710934</td>
+<td style="text-align: right;">0.3710934</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3710934</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0000000</td>
+<td style="text-align: right;">1.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Octopus</td>
+<td style="text-align: left;">Mantle</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3710934</td>
+<td style="text-align: right;">0.3710934</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Skin</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">MasterPure</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">0.3710934</td>
+<td style="text-align: right;">0.3710934</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerFecal</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">qubit_mean</td>
+<td style="text-align: left;">Turbot</td>
+<td style="text-align: left;">Gut</td>
+<td style="text-align: left;">PowerSoil</td>
+<td style="text-align: left;">PureLink</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Pairwise comparisons revealed specific differences between kits, although statistical power was limited in some cases due to sample size and missing data.</p>
+</section>
+<section id="overall-the-results-demonstrate-that" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="overall-the-results-demonstrate-that"><span class="header-section-number">4.6</span> Overall, the results demonstrate that:</h2>
+<p>DNA extraction performance is strongly dependent on both the extraction method and the biological matrix. Mechanical lysis-based kits tend to increase variability but may improve DNA recovery in complex samples. Enzymatic extraction provides more consistent results but may be less efficient in challenging matrices. Inhibitor removal efficiency is a critical factor, particularly for mucus-rich samples such as skin.</p>
+<p>Taken together, these findings highlight the importance of selecting an extraction method tailored to the sample type in order to ensure reliable and reproducible microbiome profiling.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./experimental_design.html" class="pagination-link" aria-label="Experimental design">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Experimental design</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link" aria-label="Summary">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

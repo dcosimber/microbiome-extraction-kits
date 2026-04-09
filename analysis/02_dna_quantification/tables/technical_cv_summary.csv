@@ -1,0 +1,17 @@
+Kit,Species,Tissue,n_groups,nanodrop_cv_mean,ratio_260_280_cv_mean,ratio_260_230_cv_mean,qubit_cv_mean
+MasterPure,Octopus,Skin,5,NA,NA,NA,NA
+PowerFecal,Octopus,Skin,5,NA,NA,NA,NA
+PowerSoil,Octopus,Skin,5,NA,NA,NA,NA
+PureLink,Octopus,Skin,5,NA,NA,NA,NA
+MasterPure,Octopus,Mantle,5,NA,NA,NA,NA
+PowerFecal,Octopus,Mantle,5,NA,NA,NA,NA
+PowerSoil,Octopus,Mantle,5,NA,NA,NA,NA
+PureLink,Octopus,Mantle,5,NA,NA,NA,NA
+MasterPure,Turbot,Skin,5,NA,NA,NA,NA
+PowerFecal,Turbot,Skin,5,NA,NA,NA,NA
+PowerSoil,Turbot,Skin,5,NA,NA,NA,NA
+PureLink,Turbot,Skin,5,NA,NA,NA,NA
+MasterPure,Turbot,Gut,5,NA,NA,NA,NA
+PowerFecal,Turbot,Gut,5,NA,NA,NA,NA
+PowerSoil,Turbot,Gut,5,NA,NA,NA,NA
+PureLink,Turbot,Gut,5,NA,NA,NA,NA

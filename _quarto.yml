@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Microbiome kits comparison"
+  navbar:
+    search: true
+    pinned: true
+  search:
+    location: navbar
+    type: overlay
+  chapters:
+    - index.qmd
+    - introduction.qmd
+    - experimental_design.qmd
+    - dna_extraction.qmd
+    - summary.qmd
+    - references.qmd
+
+author: "Daniel Costas"
+date: last-modified
+date-format: "MMMM D, YYYY"
+
+bibliography: references.bib
+csl: apa-6th-edition.csl
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    respect-user-color-scheme: true
+    css: styles.css
+    toc: true
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
