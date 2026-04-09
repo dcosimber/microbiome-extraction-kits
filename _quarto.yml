@@ -33,7 +33,5 @@ format:
     respect-user-color-scheme: true
     css: styles.css
     toc: true
-  pdf:
-    documentclass: scrreprt
 
 editor: visual

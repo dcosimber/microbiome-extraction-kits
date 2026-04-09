@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 Advances in high-throughput sequencing technologies have revolutionized the study of microbial communities, enabling culture-independent characterization of microbiomes across diverse environments. In particular, **16S rRNA gene sequencing and metagenomics** have become widely used to explore microbial diversity, composition, and ecological function [@Weinroth2022]. These approaches have significantly expanded our ability to detect previously uncultivable microorganisms and to investigate complex host–microbiome and environment–microbiome interactions.
 

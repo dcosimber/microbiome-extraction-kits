@@ -1,22 +1,12 @@
 [
   {
-    "objectID": "dna_extraction.html",
-    "href": "dna_extraction.html",
-    "title": "3  DNA extraction and quantification",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Microbiome kits comparison",
     "section": "",
-    "text": "3.1 Extraction kits\nFour commercially available DNA extraction kits were selected to evaluate their performance across different biological matrices, including marine host-associated samples:",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DNA extraction and quantification</span>"
-    ]
-  },
-  {
-    "objectID": "dna_extraction.html#extraction-kits",
-    "href": "dna_extraction.html#extraction-kits",
-    "title": "3  DNA extraction and quantification",
-    "section": "",
-    "text": "MasterPureTM Complete DNA and RNA Purification Kit (# MC85200, Epicentre) and Pathogen Lysis Tubes S (50) (# 19091 Qiagen)\nQIAamp® PowerFecal® Pro DNA Kit (# 51804, Qiagen) = PowerFecal kit\nThe first step of the protocol is mechano-chemical cell disruption through bead beating in lysis buffer. The Inhibitor Removal Technology is then used to remove common substances that interfere with downstream PCR applications. DNA from supernatant is captured on MB Spin Column, washed two times and eluted from the silica membrane.\nDNeasy® PowerSoil® Pro Kit (# 47014, Qiagen) = PowerSoil kit\nThe protocol starts with mechano-chemical cell disruption through beat beating in lysis solution. In this kit, Inhibitor Removal Technology is also applied, which should help in removal of organic and inorganic materials such as humic acids, cell debris, and proteins that could interfere with downstream PCR applications. After that, the sample is loaded onto MB Spin Column with silica membrane. DNA is then washed two times and eluted from the silica membrane.\nPureLink Genomic DNA Mini Kit (# K182002, Invitrogen) = PureLink kit\nMultiple protocols are proposed for this kit. In this case we applied the Gram Positive Bacterial Cell Lysate Protocol for all types of samples. In this protocol, the microorganisms are lysed by a combination of heat and enzymatic disruption (lysozyme and proteinase K). After that, the sample is treated with a cleanup buffer to eliminate PCR inhibitors. The sample is then applied to a PureLink™ spin column. DNA is washed one time and then eluted from the silica membrane.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DNA extraction and quantification</span>"
+      "Preface"
     ]
   },
   {
@@ -40,16 +30,6 @@
     ]
   },
   {
-    "objectID": "introduction.html#referemces",
-    "href": "introduction.html#referemces",
-    "title": "1  Introduction",
-    "section": "1.2 Referemces",
-    "text": "1.2 Referemces\n\n\nWeinroth, M. D., Belk, A. D., Dean, C., Noyes, N., Dittoe, D. K.,\nRothrock Jr., M. J., … Wells, J. E. (2022). Considerations and best\npractices in animal science 16S ribosomal RNA gene sequencing microbiome\nstudies. Journal of Animal Science, 100(2), skab346.\nhttps://doi.org/10.1093/jas/skab346",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
     "objectID": "experimental_design.html",
     "href": "experimental_design.html",
     "title": "2  Experimental design",
@@ -60,13 +40,23 @@
     ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "4  Summary",
+    "objectID": "dna_extraction.html",
+    "href": "dna_extraction.html",
+    "title": "3  DNA extraction and quantification",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "text": "3.1 Extraction kits\nFour commercially available DNA extraction kits were selected to evaluate their performance across different biological matrices, including marine host-associated samples:",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DNA extraction and quantification</span>"
+    ]
+  },
+  {
+    "objectID": "dna_extraction.html#extraction-kits",
+    "href": "dna_extraction.html#extraction-kits",
+    "title": "3  DNA extraction and quantification",
+    "section": "",
+    "text": "MasterPureTM Complete DNA and RNA Purification Kit (# MC85200, Epicentre) and Pathogen Lysis Tubes S (50) (# 19091 Qiagen)\nQIAamp® PowerFecal® Pro DNA Kit (# 51804, Qiagen) = PowerFecal kit\nThe first step of the protocol is mechano-chemical cell disruption through bead beating in lysis buffer. The Inhibitor Removal Technology is then used to remove common substances that interfere with downstream PCR applications. DNA from supernatant is captured on MB Spin Column, washed two times and eluted from the silica membrane.\nDNeasy® PowerSoil® Pro Kit (# 47014, Qiagen) = PowerSoil kit\nThe protocol starts with mechano-chemical cell disruption through beat beating in lysis solution. In this kit, Inhibitor Removal Technology is also applied, which should help in removal of organic and inorganic materials such as humic acids, cell debris, and proteins that could interfere with downstream PCR applications. After that, the sample is loaded onto MB Spin Column with silica membrane. DNA is then washed two times and eluted from the silica membrane.\nPureLink Genomic DNA Mini Kit (# K182002, Invitrogen) = PureLink kit\nMultiple protocols are proposed for this kit. In this case we applied the Gram Positive Bacterial Cell Lysate Protocol for all types of samples. In this protocol, the microorganisms are lysed by a combination of heat and enzymatic disruption (lysozyme and proteinase K). After that, the sample is treated with a cleanup buffer to eliminate PCR inhibitors. The sample is then applied to a PureLink™ spin column. DNA is washed one time and then eluted from the silica membrane.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DNA extraction and quantification</span>"
     ]
   },
   {
@@ -75,16 +65,6 @@
     "title": "3  DNA extraction and quantification",
     "section": "3.2 DNA quantification",
     "text": "3.2 DNA quantification\nDNA concentration and quality were assessed using two complementary approaches:\n\nNanodrop spectrophotometry, providing estimates of DNA concentration as well as purity ratios (A260/A280 and A260/A230)\nQubit dsDNA High Sensitivity Assay (ThermoFisher), providing fluorometric quantification of double-stranded DNA\n\nWhile Nanodrop measurements were available for all samples, Qubit measurements were only available for a subset of samples. In some cases, Qubit values were reported as out of range, indicating DNA concentrations below the detection threshold.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>DNA extraction and quantification</span>"
-    ]
-  },
-  {
-    "objectID": "dna_extraction.html#dna-concentration-and-quality",
-    "href": "dna_extraction.html#dna-concentration-and-quality",
-    "title": "3  DNA extraction and quantification",
-    "section": "4.1 DNA concentration and quality",
-    "text": "4.1 DNA concentration and quality\n\n\n\n\n\n\n\nNote:\nIIM ID: sample identifier assigned in Aquabiotec Lab.\nNovogene ID: sample identifier used for sequencing submission.\nSwabbing: technical replicate within each biological replicate.\nQubit status: measurement status of Qubit DNA concentration (Measured, Out of range, or Missing).",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>DNA extraction and quantification</span>"
     ]
@@ -147,6 +127,16 @@
     "text": "4.6 Overall, the results demonstrate that:\nDNA extraction performance is strongly dependent on both the extraction method and the biological matrix. Mechanical lysis-based kits tend to increase variability but may improve DNA recovery in complex samples. Enzymatic extraction provides more consistent results but may be less efficient in challenging matrices. Inhibitor removal efficiency is a critical factor, particularly for mucus-rich samples such as skin.\nTaken together, these findings highlight the importance of selecting an extraction method tailored to the sample type in order to ensure reliable and reproducible microbiome profiling.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>DNA extraction and quantification</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "4  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
     ]
   }
 ]

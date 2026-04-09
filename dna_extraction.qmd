@@ -42,8 +42,6 @@ library(knitr)
 library(kableExtra)
 library(here)
 
-#| echo: false
-
 dna_clean <- read_csv(here("analysis", "02_dna_quantification", "tables", "dna_quantification_clean.csv"), show_col_types = FALSE)
 
 summary_by_kit <- read_csv(here("analysis", "02_dna_quantification", "tables", "summary_by_kit.csv"), show_col_types = FALSE)
@@ -82,9 +80,7 @@ DT::datatable(
     buttons = list(
       list(extend = "copy", text = "Copy"),
       list(extend = "csv", text = "CSV"),
-      list(extend = "excel", text = "Excel"),
-      list(extend = "pdf", text = "PDF"),
-      list(extend = "print", text = "Print")
+      list(extend = "excel", text = "Excel")
     )
   )
 )

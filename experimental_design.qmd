@@ -14,7 +14,7 @@ library(readxl)
 library(knitr)
 library(kableExtra)
 
-df <- read_excel(here("tables", "samples_data.xlsx"), sheet = "samples")
+df <- read_excel(here("analysis", "01_data", "samples_data.xlsx"), sheet = "samples")
 
 kable(
   df,

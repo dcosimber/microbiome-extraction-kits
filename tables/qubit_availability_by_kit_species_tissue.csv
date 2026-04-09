@@ -1,0 +1,37 @@
+Kit,Species,Tissue,Qubit status,n,prop
+MasterPure,Octopus,Skin,Measured,2,0.4
+MasterPure,Octopus,Skin,Missing,3,0.6
+PowerFecal,Octopus,Skin,Measured,1,0.2
+PowerFecal,Octopus,Skin,Out of range,4,0.8
+PowerSoil,Octopus,Skin,Measured,1,0.2
+PowerSoil,Octopus,Skin,Missing,3,0.6
+PowerSoil,Octopus,Skin,Out of range,1,0.2
+PureLink,Octopus,Skin,Measured,3,0.6
+PureLink,Octopus,Skin,Missing,2,0.4
+MasterPure,Octopus,Mantle,Measured,3,0.6
+MasterPure,Octopus,Mantle,Missing,2,0.4
+PowerFecal,Octopus,Mantle,Measured,2,0.4
+PowerFecal,Octopus,Mantle,Missing,3,0.6
+PowerSoil,Octopus,Mantle,Measured,2,0.4
+PowerSoil,Octopus,Mantle,Missing,3,0.6
+PureLink,Octopus,Mantle,Measured,1,0.2
+PureLink,Octopus,Mantle,Missing,4,0.8
+MasterPure,Turbot,Skin,Measured,2,0.4
+MasterPure,Turbot,Skin,Missing,3,0.6
+PowerFecal,Turbot,Skin,Measured,1,0.2
+PowerFecal,Turbot,Skin,Missing,3,0.6
+PowerFecal,Turbot,Skin,Out of range,1,0.2
+PowerSoil,Turbot,Skin,Measured,1,0.2
+PowerSoil,Turbot,Skin,Missing,3,0.6
+PowerSoil,Turbot,Skin,Out of range,1,0.2
+PureLink,Turbot,Skin,Measured,2,0.4
+PureLink,Turbot,Skin,Missing,3,0.6
+MasterPure,Turbot,Gut,Measured,2,0.4
+MasterPure,Turbot,Gut,Missing,3,0.6
+PowerFecal,Turbot,Gut,Missing,3,0.6
+PowerFecal,Turbot,Gut,Out of range,2,0.4
+PowerSoil,Turbot,Gut,Measured,1,0.2
+PowerSoil,Turbot,Gut,Missing,3,0.6
+PowerSoil,Turbot,Gut,Out of range,1,0.2
+PureLink,Turbot,Gut,Measured,2,0.4
+PureLink,Turbot,Gut,Missing,3,0.6
