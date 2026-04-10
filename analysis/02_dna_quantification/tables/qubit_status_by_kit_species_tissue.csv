@@ -1,4 +1,4 @@
-Kit,Species,Tissue,Qubit_status,n,prop
+Kit,Species,Tissue,Qubit_status,Number of samples,Proportion of samples
 MasterPure,Octopus,Skin,Measured,2,0.4
 MasterPure,Octopus,Skin,Missing,3,0.6
 PowerFecal,Octopus,Skin,Measured,1,0.2

@@ -1,4 +1,4 @@
-Kit,Species,Tissue,n_individuals,nanodrop_mean,nanodrop_sd,nanodrop_median,ratio_260_280_mean,ratio_260_280_sd,ratio_260_230_mean,ratio_260_230_sd,qubit_mean,qubit_sd
+Kit,Species,Tissue,Number of individuals,"Mean DNA concentration (Nanodrop, ng/µL)","SD DNA concentration (Nanodrop, ng/µL)","Median DNA concentration (Nanodrop, ng/µL)",Mean A260/A280 ratio,SD A260/A280 ratio,Mean A260/A230 ratio,SD A260/A230 ratio,"Mean DNA concentration (Qubit, ng/µL)","SD DNA concentration (Qubit, ng/µL)"
 MasterPure,Octopus,Skin,5,24.583199999999998,NA,24.583199999999998,1.761,NA,0.7186,NA,15.969999999999999,NA
 PowerFecal,Octopus,Skin,5,4.3237499999999995,NA,4.3237499999999995,1.798,NA,0.0968,NA,0.429,NA
 PowerSoil,Octopus,Skin,5,11.92,NA,11.92,2.126,NA,0.162,NA,0.068,NA

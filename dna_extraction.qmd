@@ -2,32 +2,32 @@
 
 ## Extraction kits
 
-Four commercially available DNA extraction kits were selected to evaluate their performance across different biological matrices, including marine host-associated samples:
+Four commercially available DNA extraction kits were selected to evaluate their performance across host-associated marine samples from two species (*Octopus* and *Turbot*) and four biological matrices (octopus skin, octopus mantle, turbot skin, and turbot gut). The selected kits represent different lysis and purification chemistries, allowing comparison of enzymatic and mechanical approaches under the same experimental design.
 
--   **MasterPure^TM^ Complete DNA and RNA Purification Kit (# MC85200, Epicentre) and Pathogen Lysis Tubes S (50) (# 19091 Qiagen)**
+-   **MasterPure^TM^ Complete DNA and RNA Purification Kit (# MC85200, Epicentre) + Pathogen Lysis Tubes S (# 19091, Qiagen)**\
+    This protocol combines chemical and enzymatic extraction with mechanical disruption through pathogen lysis tubes. It is intended to recover nucleic acids from challenging biological matrices and is widely used in microbiological applications requiring relatively high DNA yield.
 
--   **QIAamp® PowerFecal® Pro DNA Kit (# 51804, Qiagen) = PowerFecal kit**
+-   **QIAamp® PowerFecal® Pro DNA Kit (# 51804, Qiagen) = PowerFecal kit**\
+    The protocol begins with mechano-chemical cell disruption through bead beating in lysis buffer. Inhibitor Removal Technology is then applied to remove substances that may interfere with downstream PCR applications. DNA is captured on a silica spin column, washed, and eluted.
 
-    The first step of the protocol is mechano-chemical cell disruption through bead beating in lysis buffer. The Inhibitor Removal Technology is then used to remove common substances that interfere with downstream PCR applications. DNA from supernatant is captured on MB Spin Column, washed two times and eluted from the silica membrane.
+-   **DNeasy® PowerSoil® Pro Kit (# 47014, Qiagen) = PowerSoil kit**\
+    This kit also relies on bead beating for cell disruption and incorporates inhibitor-removal steps intended to eliminate humic substances, proteins, and other compounds that may compromise downstream enzymatic reactions. DNA is purified using a silica membrane column.
 
--   **DNeasy® PowerSoil® Pro Kit (# 47014, Qiagen) = PowerSoil kit**
+-   **PureLink Genomic DNA Mini Kit (# K182002, Invitrogen) = PureLink kit**\
+    Multiple protocols are available for this kit. In this study, the Gram-Positive Bacterial Cell Lysate protocol was applied to all samples. Lysis is achieved through a combination of heat and enzymatic treatment (lysozyme and proteinase K), followed by cleanup and silica-column purification.
 
-    The protocol starts with mechano-chemical cell disruption through beat beating in lysis solution. In this kit, Inhibitor Removal Technology is also applied, which should help in removal of organic and inorganic materials such as humic acids, cell debris, and proteins that could interfere with downstream PCR applications. After that, the sample is loaded onto MB Spin Column with silica membrane. DNA is then washed two times and eluted from the silica membrane.
-
--   **PureLink Genomic DNA Mini Kit (# K182002, Invitrogen) = PureLink kit**
-
-    Multiple protocols are proposed for this kit. In this case we applied the Gram Positive Bacterial Cell Lysate Protocol for all types of samples. In this protocol, the microorganisms are lysed by a combination of heat and enzymatic disruption (lysozyme and proteinase K). After that, the sample is treated with a cleanup buffer to eliminate PCR inhibitors. The sample is then applied to a PureLink™ spin column. DNA is washed one time and then eluted from the silica membrane.
+The inclusion of kits with different lysis strategies was particularly relevant for this study because marine host-associated matrices may differ widely in mucus content, biomass, inhibitor load, and microbial composition, all of which can influence DNA recovery and purity.
 
 ## DNA quantification
 
-DNA concentration and quality were assessed using two complementary approaches:
+DNA concentration and purity were assessed using two complementary methods:
 
-- **Nanodrop spectrophotometry**, providing estimates of DNA concentration as well as purity ratios (`A260/A280` and `A260/A230`)
-- **Qubit dsDNA High Sensitivity Assay (ThermoFisher)**, providing fluorometric quantification of double-stranded DNA
+-   **Nanodrop spectrophotometry**, which provides an estimate of total nucleic acid concentration together with the absorbance ratios **A260/A280** and **A260/A230**
+-   **Qubit dsDNA High Sensitivity Assay (Thermo Fisher Scientific)**, which provides fluorometric quantification of double-stranded DNA and is less affected by contaminants than spectrophotometric measurements
 
-While Nanodrop measurements were available for all samples, Qubit measurements were only available for a subset of samples. In some cases, Qubit values were reported as *out of range*, indicating DNA concentrations below the detection threshold.
+Nanodrop measurements were available for the full dataset, whereas Qubit measurements were only available for a subset of samples. Some samples were recorded as *out of range* or could not be quantified, which is informative in itself because it reflects low DNA concentration or low assay detectability.
 
----
+In the downstream analysis, Nanodrop concentrations lower than or equal to zero were treated as non-informative for quantitative comparisons. Statistical analyses were conducted on paired biological replicates, since each individual sample was processed with all extraction kits.
 
 # Results
 
@@ -37,37 +37,66 @@ While Nanodrop measurements were available for all samples, Qubit measurements w
 #| warning: false
 
 library(readr)
+library(dplyr)
 library(DT)
 library(knitr)
 library(kableExtra)
 library(here)
+library(scales)
 
-dna_clean <- read_csv(here("analysis", "02_dna_quantification", "tables", "dna_quantification_clean.csv"), show_col_types = FALSE)
+dna_analysis <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "dna_quantification_analysis_ready.csv"),
+  show_col_types = FALSE
+)
 
-summary_by_kit <- read_csv(here("analysis", "02_dna_quantification", "tables", "summary_by_kit.csv"), show_col_types = FALSE)
+summary_by_kit <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "summary_by_kit.csv"),
+  show_col_types = FALSE
+)
 
-summary_by_kit_species_tissue <- read_csv(here("analysis", "02_dna_quantification", "tables", "summary_by_kit_species_tissue.csv"), show_col_types = FALSE)
+summary_by_kit_species_tissue <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "summary_by_kit_species_tissue.csv"),
+  show_col_types = FALSE
+)
 
-purity_pass <- read_csv(here("analysis", "02_dna_quantification", "tables", "purity_pass_by_kit_species_tissue.csv"), show_col_types = FALSE)
+purity_pass_by_kit <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "purity_pass_by_kit.csv"),
+  show_col_types = FALSE
+)
 
-friedman_results <- read_csv(here("analysis", "02_dna_quantification", "tables", "friedman_results_by_matrix.csv"), show_col_types = FALSE)
+purity_pass_by_kit_species_tissue <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "purity_pass_by_kit_species_tissue.csv"),
+  show_col_types = FALSE
+)
 
-wilcox_results <- read_csv(here("analysis", "02_dna_quantification", "tables", "pairwise_paired_wilcox_by_matrix.csv"), show_col_types = FALSE)
+friedman_results <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "friedman_results_by_matrix.csv"),
+  show_col_types = FALSE
+)
+
+wilcox_results <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "pairwise_paired_wilcox_by_matrix.csv"),
+  show_col_types = FALSE
+)
+
+technical_cv_summary <- read_csv(
+  here("analysis", "02_dna_quantification", "tables", "technical_cv_summary.csv"),
+  show_col_types = FALSE
+)
 ```
-
 
 ## Overview of the dataset
 
-The dataset comprises DNA quantification measurements obtained from two species (Octopus and Turbot), including two tissue types per species. Each biological replicate was processed using all extraction kits, enabling paired comparisons across methods.
+The dataset comprised **80 extraction outcomes** in total, corresponding to **20 samples per kit** across four extraction kits. The study included two host species (*Octopus* and *Turbot*) and four biological matrices: octopus skin, octopus mantle, turbot skin, and turbot gut. Each biological sample was processed with all extraction kits, enabling a paired comparison framework.
 
 ```{r}
 #| echo: false
 
 DT::datatable(
-  dna_clean,
+  dna_analysis,
   caption = htmltools::tags$caption(
     style = "caption-side: top; text-align: left;",
-    "Table 1. DNA quantification dataset."
+    "Table 1. Analysis-ready DNA quantification dataset."
   ),
   rownames = FALSE,
   extensions = "Buttons",
@@ -87,42 +116,64 @@ DT::datatable(
 ```
 
 ::: table-note
-Note:
-Each biological replicate was processed with all extraction kits.
-Swabbing corresponds to technical replicates within each biological sample.
+Each biological replicate was extracted with all four kits. When present, repeated swabbings correspond to technical rows within the same biological sample.
 :::
+
+## Global performance across extraction kits
+
+### Summary by kit
+
+```{r}
+#| echo: false
+
+kable(
+  summary_by_kit,
+  caption = "Table 2. DNA concentration and purity summary by extraction kit."
+) %>%
+  kable_styling(full_width = FALSE)
+```
+
+A clear ranking emerged from the global descriptive summary. **MasterPure** showed the best overall performance across all major indicators. It yielded the highest mean DNA concentration by Nanodrop (**111 ng/µL**) and also the highest mean Qubit concentration (**20.2 ng/µL**), indicating that its superior performance was not restricted to spectrophotometric estimates alone. In contrast, the remaining kits showed markedly lower values: **PowerFecal** yielded intermediate concentrations, **PowerSoil** performed below PowerFecal, and **PureLink** showed the weakest overall recovery.
+
+MasterPure also achieved the highest proportion of Qubit-measured samples (**45%**), suggesting that it more frequently generated DNA amounts above the assay detection range. This result is consistent with its higher global yield and reinforces the idea that the kit recovered more measurable double-stranded DNA, not simply more absorbance signal.
+
+### Summary by kit, species, and tissue
+
+```{r}
+#| echo: false
+
+kable(
+  summary_by_kit_species_tissue,
+  caption = "Table 3. DNA concentration and purity summary by extraction kit, species, and tissue."
+) %>%
+  kable_styling(full_width = FALSE)
+```
+
+The matrix-specific summary shows that extraction performance was not completely uniform across biological matrices. Even so, the overall trend remained consistent: kit choice clearly influenced both DNA recovery and purity estimates. This matrix dependence justifies the paired within-matrix statistical approach used below.
 
 ## DNA concentration
 
-### Descriptive statistics 
+### Nanodrop concentration
 
 ```{r}
 #| echo: false
-
-kable(summary_by_kit, caption = "Table 2. DNA concentration and quality summary by extraction kit.") %>%
-  kable_styling(full_width = FALSE)
-```
-
-DNA yield varied substantially across extraction kits. Mechanical lysis-based methods tended to produce higher variability in DNA concentration, whereas enzymatic approaches yielded more consistent but sometimes lower values.
-
-
-```{r}
-#| echo: false
-
-kable(summary_by_kit_species_tissue, caption = "Table 3. DNA concentration summary by kit, species and tissue.") %>%
-  kable_styling(full_width = FALSE)
-```
-
-Differences between kits were strongly dependent on the biological matrix, with mucus-rich samples showing greater variability.
-
-### Visualization 
-
-```{r}
-#| echo: false
-
 knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "nanodrop_by_kit_species_tissue.png"))
 ```
 
+The Nanodrop distributions reveal large differences in extraction yield across kits and matrices. Across the full dataset, **MasterPure consistently showed the highest concentration values**, whereas **PureLink** was clearly the weakest performer. PowerFecal and PowerSoil generally occupied an intermediate position.
+
+Because Nanodrop can be affected by co-extracted contaminants, these values should not be interpreted in isolation. However, in this study the Nanodrop trend was strongly supported by the Qubit results, which increases confidence that the higher MasterPure values reflect genuinely higher DNA recovery.
+
+### Qubit concentration
+
+```{r}
+#| echo: false
+knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "qubit_measured_by_kit_species_tissue.png"))
+```
+
+Among samples that could be quantified by Qubit, the same overall pattern was observed: **MasterPure showed the highest Qubit concentration**, followed by PowerFecal and PowerSoil, while PureLink yielded very low values. This agreement between Nanodrop and Qubit is important because Qubit is less sensitive to salts, proteins, and other contaminants that may inflate spectrophotometric measurements.
+
+Taken together, both quantification approaches indicate that **MasterPure provided the highest DNA recovery in this experiment**.
 
 ## DNA purity
 
@@ -130,55 +181,130 @@ knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "nano
 
 ```{r}
 #| echo: false
-
-knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "nanodrop_by_kit_species_tissue.png"))
+knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "ratio_260_280_by_kit_species_tissue.png"))
 ```
 
-Lower A260/A230 ratios were frequently observed, particularly in mucus-rich samples. This suggests the presence of residual contaminants such as salts or organic compounds, highlighting the importance of efficient inhibitor removal.
+The A260/A280 ratio is commonly used as a broad indicator of protein contamination or general spectrophotometric quality. Here, **MasterPure showed the most favorable global profile**, with a mean A260/A280 ratio of **1.80**, very close to the expected range for relatively clean DNA. It also had the highest proportion of samples within the **1.7–2.0** interval (**60%**).
+
+By contrast, **PowerFecal** and **PureLink** had low mean A260/A280 values (**1.33** and **1.37**, respectively), suggesting poorer purity or interference in absorbance measurements. **PowerSoil** had a mean A260/A280 of **2.31**, which is unusually high and should not be interpreted as superior purity. Values well above 2.0 often reflect low-concentration noise, residual contaminants, or measurement artefacts rather than especially clean DNA.
+
+### A260/A230 ratio
+
+```{r}
+#| echo: false
+knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "ratio_260_230_by_kit_species_tissue.png"))
+```
+
+The A260/A230 ratio revealed the main weakness of the extraction workflow as a whole. Although MasterPure again performed best globally, **A260/A230 values were generally low across all kits**, indicating persistent carryover of compounds that absorb at 230 nm, such as salts, chaotropic agents, carbohydrates, phenolic compounds, or other matrix-derived contaminants.
+
+Mean A260/A230 ratios were:
+
+-    **MasterPure**: 1.09
+
+-    **PowerFecal**: 0.166
+
+-    **PowerSoil**: 0.205
+
+-    **PureLink**: 0.406
+
+Thus, even the best-performing kit did not consistently generate DNA with ideal A260/A230 purity. This point is important for interpretation: **MasterPure was clearly the best relative option, but it did not produce perfectly clean DNA**.
 
 ### Purity thresholds
 
 ```{r}
 #| echo: false
 
-kable(purity_pass, caption = "Table 4. Proportion of samples passing purity thresholds.") %>%
+kable(
+  purity_pass_by_kit_species_tissue,
+  caption = "Table 4. Proportion of samples passing selected purity thresholds by extraction kit, species, and tissue."
+) %>%
   kable_styling(full_width = FALSE)
 ```
-
-The proportion of samples meeting standard purity thresholds differed between kits, reflecting variation in purification efficiency.
-
-
-## Qubit measurements
 
 ```{r}
 #| echo: false
 
+kable(
+  purity_pass_by_kit,
+  caption = "Table 5. Global proportion of samples passing selected purity thresholds by extraction kit."
+) %>%
+  kable_styling(full_width = FALSE)
+```
+
+Purity threshold analysis confirmed the global pattern observed in the raw absorbance ratios. **MasterPure** had the highest proportion of samples within the target A260/A280 interval and was the **only kit** for which a noticeable fraction of samples reached **A260/A230 ≥ 1.5** (**30%**). None of the other kits produced samples reaching this A260/A230 threshold at the global level.
+
+This suggests that inhibitor removal or cleanup remained suboptimal for all methods, but especially so for PowerFecal, PowerSoil, and PureLink.
+
+## Qubit status and detectability
+
+```{r}
+#| echo: false
 knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "qubit_status_by_kit_species_tissue.png"))
 ```
 
-Qubit measurements were not available for all samples, and a significant proportion of samples fell below the detection threshold. This limits the use of Qubit data as a primary metric for comparison.
+Qubit measurements were available only for a subset of samples, and not all extracts yielded values within the measurable range. Nevertheless, the frequency of measurable Qubit values is itself informative. The fact that **MasterPure generated the highest proportion of Qubit-measured samples** further supports its superior recovery performance. PureLink, in contrast, was associated with very low measurable DNA concentrations and poor overall detectability.
+
+## Technical reproducibility
 
 ```{r}
 #| echo: false
 
-knitr::include_graphics(here("analysis", "02_dna_quantification", "plots", "qubit_measured_by_kit_species_tissue.png"))
-```
-
-Among measurable samples, Qubit-based concentrations broadly followed trends observed with Nanodrop, although differences in sensitivity must be considered
-
-
-## Statistical comparisons
-
-To account for the paired experimental design, statistical comparisons were performed at the biological replicate level using non-parametric tests.
-
-```{r}
-#| echo: false
-
-kable(friedman_results, caption = "Table 5. Friedman test results by matrix.") %>%
+kable(
+  technical_cv_summary,
+  caption = "Table 6. Mean coefficient of variation (CV) for technical reproducibility by extraction kit, species, and tissue."
+) %>%
   kable_styling(full_width = FALSE)
 ```
 
-The Friedman test indicated that extraction method significantly influenced DNA yield and/or quality in several matrices.
+Technical reproducibility was evaluated through coefficients of variation calculated within repeated observations for the same individual-kit combination. These values should be interpreted cautiously because reproducibility may depend not only on kit chemistry but also on sample type and DNA concentration range. Still, they provide useful context for assessing whether high-yield methods also generate stable measurements.
+
+## Statistical comparisons
+
+To account for the paired experimental design, statistical testing was performed at the biological replicate level. For each species–tissue combination, values were first summarized per individual and kit, and then compared using the **Friedman test**. When appropriate, pairwise differences between kits were explored using **paired Wilcoxon tests**, with Benjamini–Hochberg correction for multiple testing.
+
+### Friedman tests
+
+```{r}
+#| echo: false
+
+kable(
+  friedman_results,
+  caption = "Table 7. Friedman test results by biological matrix."
+) %>%
+  kable_styling(full_width = FALSE)
+```
+
+The Friedman analysis identified **significant overall differences among extraction kits** for several matrices and metrics. Significant effects were detected for:
+
+-    **A260/A230 ratio** in:
+
+    -    Octopus skin
+
+    -    Octopus mantle
+
+    -    Turbot skin
+
+    -    Turbot gut
+
+-    **A260/A280 ratio** in:
+
+    -    Octopus mantle
+
+    -    Turbot gut
+
+-    **Nanodrop DNA concentration** in:
+
+    -    Octopus skin
+
+    -    Octopus mantle
+
+    -    Turbot skin
+
+    -    Turbot gut
+
+These results indicate that the extraction method significantly influenced both DNA recovery and purity, and that this effect was observed repeatedly across different biological matrices.
+
+### Pairwise paired Wilcoxon comparisons
 
 ```{r}
 #| echo: false
@@ -187,7 +313,7 @@ DT::datatable(
   wilcox_results,
   caption = htmltools::tags$caption(
     style = "caption-side: top; text-align: left;",
-    "Table 6. Pairwise Wilcoxon test results."
+    "Table 8. Pairwise paired Wilcoxon comparisons between extraction kits."
   ),
   rownames = FALSE,
   extensions = "Buttons",
@@ -196,6 +322,7 @@ DT::datatable(
     pageLength = 10,
     lengthChange = TRUE,
     scrollX = TRUE,
+    autoWidth = TRUE,
     dom = "<'row'<'col-sm-6'B><'col-sm-6'f>>rtip",
     buttons = list(
       list(extend = "copy", text = "Copy"),
@@ -206,13 +333,32 @@ DT::datatable(
 )
 ```
 
-Pairwise comparisons revealed specific differences between kits, although statistical power was limited in some cases due to sample size and missing data.
+Although global differences among kits were detected by the Friedman tests, **no pairwise Wilcoxon comparison remained significant after Benjamini–Hochberg correction**. This does not contradict the Friedman results. Rather, it indicates that the dataset contains a detectable global kit effect, but the number of paired biological replicates within each matrix was limited and therefore insufficient to confidently assign significance to specific kit-vs-kit contrasts after correcting for multiple testing.
 
-## Overall, the results demonstrate that:
+In practical terms, the results support the existence of a real extraction-method effect, but they also suggest that **pairwise resolution was limited by statistical power**.
 
-DNA extraction performance is strongly dependent on both the extraction method and the biological matrix.
-Mechanical lysis-based kits tend to increase variability but may improve DNA recovery in complex samples.
-Enzymatic extraction provides more consistent results but may be less efficient in challenging matrices.
-Inhibitor removal efficiency is a critical factor, particularly for mucus-rich samples such as skin.
+## Interpretation
 
-Taken together, these findings highlight the importance of selecting an extraction method tailored to the sample type in order to ensure reliable and reproducible microbiome profiling.
+Overall, the results support several clear conclusions.
+
+First, **DNA extraction performance depended strongly on the extraction kit**. Across the full dataset, **MasterPure showed the best global performance**, yielding the highest mean DNA concentration by both Nanodrop and Qubit, the highest proportion of measurable Qubit values, and the most favorable A260/A280 profile.
+
+Second, **DNA purity remained suboptimal across all kits**, especially when evaluated through A260/A230. Even though MasterPure performed best relative to the others, its mean A260/A230 ratio remained below ideal values, suggesting that co-extracted contaminants were still present. Thus, the best-performing kit in this study should not be interpreted as producing perfectly clean DNA, but rather as offering the **best compromise between yield and purity**.
+
+Third, the statistical analysis showed that **kit choice significantly affected DNA concentration and purity in several species–tissue combinations**, confirming that the differences observed descriptively were not random. However, the absence of significant pairwise Wilcoxon comparisons after BH correction indicates that the study had **limited power to pinpoint specific pairwise contrasts** within each biological matrix.
+
+From a practical perspective, the ranking of kits in this study was clear:
+
+1.   **MasterPure** — best overall candidate for future extractions
+
+2.   **PowerFecal** — intermediate performance
+
+3.   **PowerSoil** — intermediate to low performance, with questionable A260/A280 behavior
+
+4.   **PureLink** — poorest overall performance in terms of DNA recovery
+
+## Conclusion
+
+This comparison shows that extraction kit selection has a substantial effect on DNA yield and spectrophotometric quality in host-associated marine samples. Among the four methods tested, **MasterPure was the most effective overall**, consistently outperforming the other kits in both DNA recovery and global purity metrics. However, the generally low A260/A230 ratios indicate that contaminant carryover remains a relevant issue, even for the best-performing method.
+
+These findings suggest that **MasterPure is the strongest candidate for downstream microbiome profiling in this dataset**, but they also support the consideration of an additional cleanup step if downstream applications are particularly sensitive to inhibitors or carryover compounds. More broadly, the results highlight that extraction method should not be treated as a trivial preprocessing step, as it can substantially influence the amount and apparent quality of DNA recovered from complex marine biological matrices.

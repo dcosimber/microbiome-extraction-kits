@@ -1,4 +1,4 @@
-Species,Tissue,Individual,Kit,n_rows,nanodrop_mean,ratio_260_280_mean,ratio_260_230_mean,qubit_mean,qubit_status_mode
+Species,Tissue,Individual,Kit,Number of technical rows,"Mean DNA concentration (Nanodrop, ng/µL)",Mean A260/A280 ratio,Mean A260/A230 ratio,"Mean DNA concentration (Qubit, ng/µL)",Most frequent Qubit status
 Octopus,Skin,1,MasterPure,1,30.6,1.65,0.56,NA,Missing
 Octopus,Skin,1,PowerFecal,1,0.51,1.982,0.19,NA,Out of range
 Octopus,Skin,1,PowerSoil,1,18.8,1.54,0.15,NA,Missing

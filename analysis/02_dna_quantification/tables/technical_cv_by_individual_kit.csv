@@ -1,4 +1,4 @@
-Species,Tissue,Individual,Kit,n_rows,nanodrop_cv,ratio_260_280_cv,ratio_260_230_cv,qubit_cv
+Species,Tissue,Individual,Kit,Number of technical rows,CV Nanodrop DNA concentration (%),CV A260/A280 ratio (%),CV A260/A230 ratio (%),CV Qubit DNA concentration (%)
 Octopus,Skin,1,MasterPure,1,NA,NA,NA,NA
 Octopus,Skin,1,PowerFecal,1,NA,NA,NA,NA
 Octopus,Skin,1,PowerSoil,1,NA,NA,NA,NA

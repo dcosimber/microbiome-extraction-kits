@@ -1,4 +1,4 @@
-Kit,Species,Tissue,n_groups,nanodrop_cv_mean,ratio_260_280_cv_mean,ratio_260_230_cv_mean,qubit_cv_mean
+Kit,Species,Tissue,Number of individual-kit groups,Mean CV Nanodrop DNA concentration (%),Mean CV A260/A280 ratio (%),Mean CV A260/A230 ratio (%),Mean CV Qubit DNA concentration (%)
 MasterPure,Octopus,Skin,5,NA,NA,NA,NA
 PowerFecal,Octopus,Skin,5,NA,NA,NA,NA
 PowerSoil,Octopus,Skin,5,NA,NA,NA,NA

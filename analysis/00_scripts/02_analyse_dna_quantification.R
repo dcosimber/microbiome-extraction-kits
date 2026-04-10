@@ -13,6 +13,8 @@ library(ggplot2)
 library(here)
 library(purrr)
 library(stringr)
+library(tibble)
+library(scales)
 
 # -----------------------------
 # 2. Paths
@@ -45,6 +47,17 @@ cv_percent <- function(x) {
   100 * s / m
 }
 
+format_metric_label <- function(x) {
+  recode(
+    x,
+    nanodrop_mean      = "Nanodrop DNA concentration",
+    ratio_260_280_mean = "A260/A280 ratio",
+    ratio_260_230_mean = "A260/A230 ratio",
+    qubit_mean         = "Qubit DNA concentration",
+    .default = x
+  )
+}
+
 # Friedman test within each Species x Tissue using Individual as block
 run_friedman <- function(df, value_col) {
   value_sym <- rlang::sym(value_col)
@@ -69,10 +82,10 @@ run_friedman <- function(df, value_col) {
     n_kits   <- ncol(wide_complete) - 1
     
     if (n_blocks < 2 || n_kits < 2) {
-      return(data.frame(
+      return(tibble(
         metric = value_col,
-        Species = unique(g$Species)[1],
-        Tissue = unique(g$Tissue)[1],
+        species = unique(g$Species)[1],
+        tissue = unique(g$Tissue)[1],
         n_blocks = n_blocks,
         statistic = NA_real_,
         p_value = NA_real_
@@ -84,10 +97,10 @@ run_friedman <- function(df, value_col) {
     
     ft <- friedman.test(value ~ Kit | Individual, data = long_complete)
     
-    data.frame(
+    tibble(
       metric = value_col,
-      Species = unique(g$Species)[1],
-      Tissue = unique(g$Tissue)[1],
+      species = unique(g$Species)[1],
+      tissue = unique(g$Tissue)[1],
       n_blocks = n_blocks,
       statistic = unname(ft$statistic),
       p_value = ft$p.value
@@ -121,10 +134,10 @@ run_pairwise_wilcox <- function(df, value_col) {
         pivot_wider(names_from = Kit, values_from = value)
       
       if (!all(p %in% names(sub))) {
-        return(data.frame(
+        return(tibble(
           metric = value_col,
-          Species = unique(g$Species)[1],
-          Tissue = unique(g$Tissue)[1],
+          species = unique(g$Species)[1],
+          tissue = unique(g$Tissue)[1],
           group1 = p[1],
           group2 = p[2],
           n_pairs = 0,
@@ -139,10 +152,10 @@ run_pairwise_wilcox <- function(df, value_col) {
       n_pairs <- nrow(sub_complete)
       
       if (n_pairs < 2) {
-        return(data.frame(
+        return(tibble(
           metric = value_col,
-          Species = unique(g$Species)[1],
-          Tissue = unique(g$Tissue)[1],
+          species = unique(g$Species)[1],
+          tissue = unique(g$Tissue)[1],
           group1 = p[1],
           group2 = p[2],
           n_pairs = n_pairs,
@@ -158,10 +171,10 @@ run_pairwise_wilcox <- function(df, value_col) {
         exact = FALSE
       )
       
-      data.frame(
+      tibble(
         metric = value_col,
-        Species = unique(g$Species)[1],
-        Tissue = unique(g$Tissue)[1],
+        species = unique(g$Species)[1],
+        tissue = unique(g$Tissue)[1],
         group1 = p[1],
         group2 = p[2],
         n_pairs = n_pairs,
@@ -172,7 +185,7 @@ run_pairwise_wilcox <- function(df, value_col) {
   })
   
   bind_rows(out) %>%
-    group_by(metric, Species, Tissue) %>%
+    group_by(metric, species, tissue) %>%
     mutate(p_adj_bh = p.adjust(p_value, method = "BH")) %>%
     ungroup()
 }
@@ -187,7 +200,6 @@ dna_clean <- readRDS(input_rds)
 # -----------------------------
 dna_analysis <- dna_clean %>%
   mutate(
-    # Concentration values <= 0 are physically implausible and treated as missing for analysis
     Nanodrop_analysis = if_else(`[ng/µL] Nanodrop` > 0, `[ng/µL] Nanodrop`, NA_real_),
     
     nanodrop_nonpositive_flag = `[ng/µL] Nanodrop` <= 0,
@@ -214,7 +226,7 @@ saveRDS(
 # -----------------------------
 
 # 6.1 Summary by kit
-summary_by_kit <- dna_analysis %>%
+summary_by_kit_raw <- dna_analysis %>%
   group_by(Kit) %>%
   summarise(
     n_samples = n(),
@@ -245,10 +257,34 @@ summary_by_kit <- dna_analysis %>%
     .groups = "drop"
   )
 
+summary_by_kit <- summary_by_kit_raw %>%
+  rename(
+    `Number of samples` = n_samples,
+    `Mean DNA concentration (Nanodrop, ng/µL)` = nanodrop_mean,
+    `SD DNA concentration (Nanodrop, ng/µL)` = nanodrop_sd,
+    `Median DNA concentration (Nanodrop, ng/µL)` = nanodrop_median,
+    `Minimum DNA concentration (Nanodrop, ng/µL)` = nanodrop_min,
+    `Maximum DNA concentration (Nanodrop, ng/µL)` = nanodrop_max,
+    `Mean A260/A280 ratio` = ratio_260_280_mean,
+    `SD A260/A280 ratio` = ratio_260_280_sd,
+    `Median A260/A280 ratio` = ratio_260_280_median,
+    `Mean A260/A230 ratio` = ratio_260_230_mean,
+    `SD A260/A230 ratio` = ratio_260_230_sd,
+    `Median A260/A230 ratio` = ratio_260_230_median,
+    `Qubit: number measured` = qubit_n_measured,
+    `Qubit: number out of range` = qubit_n_out_of_range,
+    `Qubit: number missing` = qubit_n_missing,
+    `Mean DNA concentration (Qubit, ng/µL)` = qubit_mean,
+    `SD DNA concentration (Qubit, ng/µL)` = qubit_sd,
+    `Median DNA concentration (Qubit, ng/µL)` = qubit_median,
+    `Minimum DNA concentration (Qubit, ng/µL)` = qubit_min,
+    `Maximum DNA concentration (Qubit, ng/µL)` = qubit_max
+  )
+
 write_csv(summary_by_kit, file.path(out_tables, "summary_by_kit.csv"))
 
 # 6.2 Summary by kit x species x tissue
-summary_by_kit_species_tissue <- dna_analysis %>%
+summary_by_kit_species_tissue_raw <- dna_analysis %>%
   group_by(Kit, Species, Tissue) %>%
   summarise(
     n_samples = n(),
@@ -278,10 +314,32 @@ summary_by_kit_species_tissue <- dna_analysis %>%
   ) %>%
   arrange(Species, Tissue, Kit)
 
+summary_by_kit_species_tissue <- summary_by_kit_species_tissue_raw %>%
+  rename(
+    `Number of samples` = n_samples,
+    `Mean DNA concentration (Nanodrop, ng/µL)` = nanodrop_mean,
+    `SD DNA concentration (Nanodrop, ng/µL)` = nanodrop_sd,
+    `Median DNA concentration (Nanodrop, ng/µL)` = nanodrop_median,
+    `Minimum DNA concentration (Nanodrop, ng/µL)` = nanodrop_min,
+    `Maximum DNA concentration (Nanodrop, ng/µL)` = nanodrop_max,
+    `Mean A260/A280 ratio` = ratio_260_280_mean,
+    `SD A260/A280 ratio` = ratio_260_280_sd,
+    `Median A260/A280 ratio` = ratio_260_280_median,
+    `Mean A260/A230 ratio` = ratio_260_230_mean,
+    `SD A260/A230 ratio` = ratio_260_230_sd,
+    `Median A260/A230 ratio` = ratio_260_230_median,
+    `Qubit: number measured` = qubit_n_measured,
+    `Qubit: number out of range` = qubit_n_out_of_range,
+    `Qubit: number missing` = qubit_n_missing,
+    `Mean DNA concentration (Qubit, ng/µL)` = qubit_mean,
+    `SD DNA concentration (Qubit, ng/µL)` = qubit_sd,
+    `Median DNA concentration (Qubit, ng/µL)` = qubit_median
+  )
+
 write_csv(summary_by_kit_species_tissue, file.path(out_tables, "summary_by_kit_species_tissue.csv"))
 
 # 6.3 Summary of purity pass rates
-purity_pass_by_kit <- dna_analysis %>%
+purity_pass_by_kit_raw <- dna_analysis %>%
   group_by(Kit) %>%
   summarise(
     n_samples = n(),
@@ -292,9 +350,18 @@ purity_pass_by_kit <- dna_analysis %>%
     .groups = "drop"
   )
 
+purity_pass_by_kit <- purity_pass_by_kit_raw %>%
+  rename(
+    `Number of samples` = n_samples,
+    `Proportion within A260/A280 = 1.7-2.0` = prop_260_280_17_20,
+    `Proportion within A260/A280 = 1.5-2.0` = prop_260_280_15_20,
+    `Proportion with A260/A230 >= 1.5` = prop_260_230_15,
+    `Proportion with A260/A230 >= 1.75` = prop_260_230_175
+  )
+
 write_csv(purity_pass_by_kit, file.path(out_tables, "purity_pass_by_kit.csv"))
 
-purity_pass_by_kit_species_tissue <- dna_analysis %>%
+purity_pass_by_kit_species_tissue_raw <- dna_analysis %>%
   group_by(Kit, Species, Tissue) %>%
   summarise(
     n_samples = n(),
@@ -305,6 +372,15 @@ purity_pass_by_kit_species_tissue <- dna_analysis %>%
     .groups = "drop"
   ) %>%
   arrange(Species, Tissue, Kit)
+
+purity_pass_by_kit_species_tissue <- purity_pass_by_kit_species_tissue_raw %>%
+  rename(
+    `Number of samples` = n_samples,
+    `Proportion within A260/A280 = 1.7-2.0` = prop_260_280_17_20,
+    `Proportion within A260/A280 = 1.5-2.0` = prop_260_280_15_20,
+    `Proportion with A260/A230 >= 1.5` = prop_260_230_15,
+    `Proportion with A260/A230 >= 1.75` = prop_260_230_175
+  )
 
 write_csv(
   purity_pass_by_kit_species_tissue,
@@ -318,7 +394,11 @@ qubit_status_by_kit_species_tissue <- dna_analysis %>%
   group_by(Kit, Species, Tissue) %>%
   mutate(prop = n / sum(n)) %>%
   ungroup() %>%
-  arrange(Species, Tissue, Kit, Qubit_status)
+  arrange(Species, Tissue, Kit, Qubit_status) %>%
+  rename(
+    `Number of samples` = n,
+    `Proportion of samples` = prop
+  )
 
 write_csv(
   qubit_status_by_kit_species_tissue,
@@ -329,7 +409,8 @@ write_csv(
 sequencing_by_kit_species_tissue <- dna_analysis %>%
   group_by(Kit, Species, Tissue, Sequencing) %>%
   summarise(n = n(), .groups = "drop") %>%
-  arrange(Species, Tissue, Kit, Sequencing)
+  arrange(Species, Tissue, Kit, Sequencing) %>%
+  rename(`Number of samples` = n)
 
 write_csv(
   sequencing_by_kit_species_tissue,
@@ -339,8 +420,7 @@ write_csv(
 # -----------------------------
 # 7. Individual-level paired dataset
 # -----------------------------
-# One value per Individual x Species x Tissue x Kit
-dna_individual <- dna_analysis %>%
+dna_individual_raw <- dna_analysis %>%
   group_by(Species, Tissue, Individual, Kit) %>%
   summarise(
     n_rows = n(),
@@ -353,18 +433,28 @@ dna_individual <- dna_analysis %>%
   ) %>%
   arrange(Species, Tissue, Individual, Kit)
 
+dna_individual <- dna_individual_raw %>%
+  rename(
+    `Number of technical rows` = n_rows,
+    `Mean DNA concentration (Nanodrop, ng/µL)` = nanodrop_mean,
+    `Mean A260/A280 ratio` = ratio_260_280_mean,
+    `Mean A260/A230 ratio` = ratio_260_230_mean,
+    `Mean DNA concentration (Qubit, ng/µL)` = qubit_mean,
+    `Most frequent Qubit status` = qubit_status_mode
+  )
+
 write_csv(
   dna_individual,
   file.path(out_tables, "dna_quantification_individual.csv")
 )
 
 saveRDS(
-  dna_individual,
+  dna_individual_raw,
   file.path(out_objects, "dna_quantification_individual.rds")
 )
 
 # 7.1 Individual-level summary by kit x matrix
-summary_biological_replicates <- dna_individual %>%
+summary_biological_replicates_raw <- dna_individual_raw %>%
   group_by(Kit, Species, Tissue) %>%
   summarise(
     n_individuals = n(),
@@ -384,6 +474,20 @@ summary_biological_replicates <- dna_individual %>%
   ) %>%
   arrange(Species, Tissue, Kit)
 
+summary_biological_replicates <- summary_biological_replicates_raw %>%
+  rename(
+    `Number of individuals` = n_individuals,
+    `Mean DNA concentration (Nanodrop, ng/µL)` = nanodrop_mean,
+    `SD DNA concentration (Nanodrop, ng/µL)` = nanodrop_sd,
+    `Median DNA concentration (Nanodrop, ng/µL)` = nanodrop_median,
+    `Mean A260/A280 ratio` = ratio_260_280_mean,
+    `SD A260/A280 ratio` = ratio_260_280_sd,
+    `Mean A260/A230 ratio` = ratio_260_230_mean,
+    `SD A260/A230 ratio` = ratio_260_230_sd,
+    `Mean DNA concentration (Qubit, ng/µL)` = qubit_mean,
+    `SD DNA concentration (Qubit, ng/µL)` = qubit_sd
+  )
+
 write_csv(
   summary_biological_replicates,
   file.path(out_tables, "summary_biological_replicates.csv")
@@ -392,8 +496,7 @@ write_csv(
 # -----------------------------
 # 8. Technical reproducibility
 # -----------------------------
-# Useful only if repeated observations exist within individual x kit
-technical_cv <- dna_analysis %>%
+technical_cv_raw <- dna_analysis %>%
   group_by(Species, Tissue, Individual, Kit) %>%
   summarise(
     n_rows = n(),
@@ -404,12 +507,21 @@ technical_cv <- dna_analysis %>%
     .groups = "drop"
   )
 
+technical_cv <- technical_cv_raw %>%
+  rename(
+    `Number of technical rows` = n_rows,
+    `CV Nanodrop DNA concentration (%)` = nanodrop_cv,
+    `CV A260/A280 ratio (%)` = ratio_260_280_cv,
+    `CV A260/A230 ratio (%)` = ratio_260_230_cv,
+    `CV Qubit DNA concentration (%)` = qubit_cv
+  )
+
 write_csv(
   technical_cv,
   file.path(out_tables, "technical_cv_by_individual_kit.csv")
 )
 
-technical_cv_summary <- technical_cv %>%
+technical_cv_summary_raw <- technical_cv_raw %>%
   group_by(Kit, Species, Tissue) %>%
   summarise(
     n_groups = n(),
@@ -421,6 +533,15 @@ technical_cv_summary <- technical_cv %>%
   ) %>%
   arrange(Species, Tissue, Kit)
 
+technical_cv_summary <- technical_cv_summary_raw %>%
+  rename(
+    `Number of individual-kit groups` = n_groups,
+    `Mean CV Nanodrop DNA concentration (%)` = nanodrop_cv_mean,
+    `Mean CV A260/A280 ratio (%)` = ratio_260_280_cv_mean,
+    `Mean CV A260/A230 ratio (%)` = ratio_260_230_cv_mean,
+    `Mean CV Qubit DNA concentration (%)` = qubit_cv_mean
+  )
+
 write_csv(
   technical_cv_summary,
   file.path(out_tables, "technical_cv_summary.csv")
@@ -429,8 +550,6 @@ write_csv(
 # -----------------------------
 # 9. Inferential statistics
 # -----------------------------
-# Paired by individual within each Species x Tissue matrix
-
 metrics_to_test <- c(
   "nanodrop_mean",
   "ratio_260_280_mean",
@@ -438,18 +557,43 @@ metrics_to_test <- c(
   "qubit_mean"
 )
 
-friedman_results <- bind_rows(
-  lapply(metrics_to_test, function(m) run_friedman(dna_individual, m))
-)
+friedman_results_raw <- bind_rows(
+  lapply(metrics_to_test, function(m) run_friedman(dna_individual_raw, m))
+) %>%
+  mutate(metric = format_metric_label(metric))
+
+friedman_results <- friedman_results_raw %>%
+  rename(
+    Metric = metric,
+    Species = species,
+    Tissue = tissue,
+    `Number of paired individuals` = n_blocks,
+    `Friedman statistic` = statistic,
+    `P-value` = p_value
+  )
 
 write_csv(
   friedman_results,
   file.path(out_tables, "friedman_results_by_matrix.csv")
 )
 
-pairwise_paired_wilcox <- bind_rows(
-  lapply(metrics_to_test, function(m) run_pairwise_wilcox(dna_individual, m))
-)
+pairwise_paired_wilcox_raw <- bind_rows(
+  lapply(metrics_to_test, function(m) run_pairwise_wilcox(dna_individual_raw, m))
+) %>%
+  mutate(metric = format_metric_label(metric))
+
+pairwise_paired_wilcox <- pairwise_paired_wilcox_raw %>%
+  rename(
+    Metric = metric,
+    Species = species,
+    Tissue = tissue,
+    `Comparison 1` = group1,
+    `Comparison 2` = group2,
+    `Number of paired individuals` = n_pairs,
+    `Wilcoxon statistic` = statistic,
+    `P-value` = p_value,
+    `BH-adjusted P-value` = p_adj_bh
+  )
 
 write_csv(
   pairwise_paired_wilcox,
@@ -538,11 +682,11 @@ ggsave(
 # 10.4 Qubit status
 p_qubit_status <- ggplot(
   qubit_status_by_kit_species_tissue,
-  aes(x = Kit, y = prop, fill = Qubit_status)
+  aes(x = Kit, y = `Proportion of samples`, fill = Qubit_status)
 ) +
   geom_col(position = "fill") +
   facet_grid(Species ~ Tissue) +
-  scale_y_continuous(labels = scales::percent_format()) +
+  scale_y_continuous(labels = percent_format()) +
   labs(
     title = "Qubit measurement status by extraction kit",
     x = "Extraction kit",
@@ -587,17 +731,22 @@ ggsave(
 # 10.6 Purity pass rates
 purity_long <- purity_pass_by_kit_species_tissue %>%
   pivot_longer(
-    cols = starts_with("prop_"),
+    cols = c(
+      `Proportion within A260/A280 = 1.7-2.0`,
+      `Proportion within A260/A280 = 1.5-2.0`,
+      `Proportion with A260/A230 >= 1.5`,
+      `Proportion with A260/A230 >= 1.75`
+    ),
     names_to = "metric",
     values_to = "proportion"
   ) %>%
   mutate(
     metric = recode(
       metric,
-      prop_260_280_17_20 = "A260/A280 in 1.7-2.0",
-      prop_260_280_15_20 = "A260/A280 in 1.5-2.0",
-      prop_260_230_15 = "A260/A230 ≥ 1.5",
-      prop_260_230_175 = "A260/A230 ≥ 1.75"
+      `Proportion within A260/A280 = 1.7-2.0` = "A260/A280 in 1.7-2.0",
+      `Proportion within A260/A280 = 1.5-2.0` = "A260/A280 in 1.5-2.0",
+      `Proportion with A260/A230 >= 1.5` = "A260/A230 ≥ 1.5",
+      `Proportion with A260/A230 >= 1.75` = "A260/A230 ≥ 1.75"
     )
   )
 
@@ -607,7 +756,7 @@ p_purity_pass <- ggplot(
 ) +
   geom_col() +
   facet_grid(metric ~ Species + Tissue) +
-  scale_y_continuous(labels = scales::percent_format()) +
+  scale_y_continuous(labels = percent_format()) +
   labs(
     title = "Proportion of samples passing common purity thresholds",
     x = "Extraction kit",
@@ -626,7 +775,7 @@ ggsave(
 
 # 10.7 Paired spaghetti plot: Nanodrop at biological replicate level
 p_spaghetti_nanodrop <- ggplot(
-  dna_individual,
+  dna_individual_raw,
   aes(x = Kit, y = nanodrop_mean, group = Individual, color = factor(Individual))
 ) +
   geom_line(alpha = 0.6) +
@@ -657,7 +806,7 @@ analysis_objects <- list(
   purity_pass_by_kit_species_tissue = purity_pass_by_kit_species_tissue,
   qubit_status_by_kit_species_tissue = qubit_status_by_kit_species_tissue,
   sequencing_by_kit_species_tissue = sequencing_by_kit_species_tissue,
-  dna_individual = dna_individual,
+  dna_individual = dna_individual_raw,
   summary_biological_replicates = summary_biological_replicates,
   technical_cv = technical_cv,
   technical_cv_summary = technical_cv_summary,
@@ -669,5 +818,96 @@ saveRDS(
   analysis_objects,
   file.path(out_objects, "dna_quantification_analysis_objects.rds")
 )
+
+# -----------------------------
+# 12. Console summary for interpretation
+# -----------------------------
+summary_for_console <- summary_by_kit %>%
+  left_join(
+    purity_pass_by_kit %>%
+      select(
+        Kit,
+        `Proportion within A260/A280 = 1.7-2.0`,
+        `Proportion with A260/A230 >= 1.5`
+      ),
+    by = "Kit"
+  ) %>%
+  mutate(
+    `Proportion Qubit measured` = `Qubit: number measured` / `Number of samples`
+  ) %>%
+  select(
+    Kit,
+    `Number of samples`,
+    `Mean DNA concentration (Nanodrop, ng/µL)`,
+    `Mean A260/A280 ratio`,
+    `Mean A260/A230 ratio`,
+    `Mean DNA concentration (Qubit, ng/µL)`,
+    `Proportion Qubit measured`,
+    `Proportion within A260/A280 = 1.7-2.0`,
+    `Proportion with A260/A230 >= 1.5`
+  ) %>%
+  arrange(desc(`Mean DNA concentration (Nanodrop, ng/µL)`))
+
+friedman_sig <- friedman_results %>%
+  filter(!is.na(`P-value`), `P-value` < 0.05) %>%
+  arrange(Metric, Species, Tissue)
+
+wilcox_sig <- pairwise_paired_wilcox %>%
+  filter(!is.na(`BH-adjusted P-value`), `BH-adjusted P-value` < 0.05) %>%
+  arrange(Metric, Species, Tissue, `BH-adjusted P-value`)
+
+cat("\n====================================================\n")
+cat("DNA QUANTIFICATION: MAIN SUMMARY BY KIT\n")
+cat("====================================================\n\n")
+print(summary_for_console, n = Inf, width = Inf)
+
+cat("\n====================================================\n")
+cat("SIGNIFICANT FRIEDMAN TESTS (P < 0.05)\n")
+cat("====================================================\n\n")
+if (nrow(friedman_sig) == 0) {
+  cat("No significant Friedman tests detected.\n")
+} else {
+  print(friedman_sig, n = Inf, width = Inf)
+}
+
+cat("\n====================================================\n")
+cat("SIGNIFICANT PAIRWISE WILCOXON TESTS (BH-adjusted P < 0.05)\n")
+cat("====================================================\n\n")
+if (nrow(wilcox_sig) == 0) {
+  cat("No significant pairwise Wilcoxon comparisons detected.\n")
+} else {
+  print(wilcox_sig, n = Inf, width = Inf)
+}
+
+cat("\n====================================================\n")
+cat("TOP-LEVEL INTERPRETATION AID\n")
+cat("====================================================\n\n")
+
+top_nanodrop <- summary_for_console %>%
+  slice_max(order_by = `Mean DNA concentration (Nanodrop, ng/µL)`, n = 1, with_ties = FALSE)
+
+top_qubit <- summary_for_console %>%
+  filter(!is.na(`Mean DNA concentration (Qubit, ng/µL)`)) %>%
+  slice_max(order_by = `Mean DNA concentration (Qubit, ng/µL)`, n = 1, with_ties = FALSE)
+
+top_260280 <- summary_for_console %>%
+  filter(!is.na(`Proportion within A260/A280 = 1.7-2.0`)) %>%
+  slice_max(order_by = `Proportion within A260/A280 = 1.7-2.0`, n = 1, with_ties = FALSE)
+
+top_260230 <- summary_for_console %>%
+  filter(!is.na(`Proportion with A260/A230 >= 1.5`)) %>%
+  slice_max(order_by = `Proportion with A260/A230 >= 1.5`, n = 1, with_ties = FALSE)
+
+cat("Highest mean Nanodrop concentration:\n")
+print(top_nanodrop, n = Inf, width = Inf)
+
+cat("\nHighest mean Qubit concentration:\n")
+print(top_qubit, n = Inf, width = Inf)
+
+cat("\nBest proportion within A260/A280 = 1.7-2.0:\n")
+print(top_260280, n = Inf, width = Inf)
+
+cat("\nBest proportion with A260/A230 >= 1.5:\n")
+print(top_260230, n = Inf, width = Inf)
 
 message("DNA quantification analysis complete.")
